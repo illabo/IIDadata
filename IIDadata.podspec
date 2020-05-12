@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'IIDadata'
   s.version          = '0.1.0'
-  s.summary          = 'This package provides access to Dadata address suggestions and reverse geocoding APIs.'
+  s.summary          = 'Dadata address suggestions and reverse geocoding APIs.'
   
   s.swift_versions   = '5.2'
 
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-This package provides access to Dadata address suggestions and reverse geocoding APIs.
+  This package provides access to Dadata address suggestions and reverse geocoding APIs. Any of Dadata API settings for address suggestions are available.
                        DESC
 
   s.homepage         = 'https://github.com/illabo/IIDadata'
