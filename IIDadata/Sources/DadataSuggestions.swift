@@ -97,10 +97,32 @@ public class DadataSuggestions {
         return request
     }
     
+    ///Basic address suggestions request with only rquired data.
+    ///
+    ///- Parameter query: Query string to send to API. String of a free-form e.g. address part.
+    ///- Parameter completion: Result handler.
     public func suggestAddress(_ query: String, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
         suggestAddress(AddressSuggestionQuery(query), completion: completion)
     }
     
+    ///Address suggestions request.
+    ///
+    ///Limitations, filters and constraints may be applied to query.
+    ///
+    ///- Parameter query: Query string to send to API. String of a free-form e.g. address part.
+    ///- Parameter queryType: Lets select whether the request type. There are 3 query types available:
+    ///`address` — standart address suggestion query;
+    ///`fiasOnly` — query to only search in FIAS database: less matches, state provided address data only;
+    ///`findByID` — takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+    ///- Parameter resultsCount: How many suggestions to return. `1` provides more data on a single object
+    ///including latitude and longitude. `20` is a maximum value.
+    ///- Parameter language: Suggested results may be in Russian or English.
+    ///- Parameter constraints: List of `AddressQueryConstraint` objects to filter results.
+    ///- Parameter regionPriority: List of RegionPriority objects to prefer in lookup.
+    ///- Parameter upperScaleLimit: Bigger `ScaleLevel` object in pair of scale limits.
+    ///- Parameter lowerScaleLimit: Smaller `ScaleLevel` object in pair of scale limits.
+    ///- Parameter trimRegionResult: Remove region and city names from suggestion top level.
+    ///- Parameter completion: Result handler.
     public func suggestAddress(_ query: String,
                         queryType: AddressQueryType = .address,
                         resultsCount: Int? = 10,
@@ -125,6 +147,34 @@ public class DadataSuggestions {
         suggestAddress(suggestionQuery, completion: completion)
     }
     
+    ///Address suggestions request.
+    ///
+    ///Allows to pass most of arguments as a strings converting to internally used classes.
+    ///
+    ///- Parameter query: Query string to send to API. String of a free-form e.g. address part.
+    ///- Parameter queryType: Lets select whether the request type. There are 3 query types available:
+    ///`address` — standart address suggestion query;
+    ///`fiasOnly` — query to only search in FIAS database: less matches, state provided address data only;
+    ///`findByID` — takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+    ///- Parameter resultsCount: How many suggestions to return. `1` provides more data on a single object
+    ///including latitude and longitude. `20` is a maximum value.
+    ///- Parameter language: Suggested results in "ru" — Russian or "en" — English.
+    ///- Parameter constraints: Literal JSON string formated according to
+    ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=204669108).
+    ///- Parameter regionPriority: List of regions' KLADR IDs to prefer in lookup as shown in
+    ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795).
+    ///- Parameter upperScaleLimit: Bigger sized object in pair of scale limits.
+    ///- Parameter lowerScaleLimit: Smaller sized object in pair of scale limits. Both can take following values:
+    ///`country` — Страна,
+    ///`region` — Регион,
+    ///`area` — Район,
+    ///`city` — Город,
+    ///`settlement` — Населенный пункт,
+    ///`street` — Улица,
+    ///`house` — Дом,
+    ///`country` — Страна,
+    ///- Parameter trimRegionResult: Remove region and city names from suggestion top level.
+    ///- Parameter completion: Result handler.
     public func suggestAddress(_ query: String,
                         queryType: AddressQueryType = .address,
                         resultsCount: Int? = 10,
@@ -156,18 +206,41 @@ public class DadataSuggestions {
                        completion: completion)
     }
     
+    ///Basic address suggestions request to only search in FIAS database: less matches, state provided address data only.
+    ///
+    ///- Parameter query: Query string to send to API. String of a free-form e.g. address part.
+    ///- Parameter completion: Result handler.
     public func suggestAddressFromFIAS(_ query: String, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
         suggestAddress(AddressSuggestionQuery(query, ofType: .fiasOnly), completion: completion)
     }
     
+    ///Basic address suggestions request takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+    ///
+    ///- Parameter query: KLADR or FIAS ID.
+    ///- Parameter completion: Result handler.
     public func suggestByKLADRFIAS(_ query: String, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
         suggestAddress(AddressSuggestionQuery(query, ofType: .findByID), completion: completion)
     }
     
+    ///Address suggestion request with custom `AddressSuggestionQuery`.
+    ///
+    ///- Parameter query: Query object.
+    ///- Parameter completion: Result handler.
     public func suggestAddress(_ query: AddressSuggestionQuery, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
         fetchResponse(withQuery: query, completionHandler: completion)
     }
     
+    ///Reverse Geocode request with latitude and longitude as a single string.
+    ///
+    ///- Throws: May throw if query is malformed.
+    ///
+    ///- Parameter query: Latitude and longitude as a string. Should have single character separator.
+    ///- Parameter delimeter: Character to separate latitude and longitude. Defaults to '`,`'
+    ///- Parameter resultsCount: How many suggestions to return. `1` provides more data on a single object
+    ///including latitude and longitude. `20` is a maximum value.
+    ///- Parameter language: Suggested results in "ru" — Russian or "en" — English.
+    ///- Parameter searchRadius: Radius to suggest objects nearest to coordinates point.
+    ///- Parameter completion: Result handler.
     public func reverseGeocode(query: String,
                         delimeter: Character = ",",
                         resultsCount: Int? = 10,
@@ -183,6 +256,15 @@ public class DadataSuggestions {
         reverseGeocode(geoquery, completion: completion)
     }
     
+    ///Reverse Geocode request with latitude and longitude as a single string.
+    ///
+    ///- Parameter latitude: Latitude.
+    ///- Parameter longitude: Longitude.
+    ///- Parameter resultsCount: How many suggestions to return. `1` provides more data on a single object
+    ///including latitude and longitude. `20` is a maximum value.
+    ///- Parameter language: Suggested results may be in Russian or English.
+    ///- Parameter searchRadius: Radius to suggest objects nearest to coordinates point.
+    ///- Parameter completion: Result handler.
     public func reverseGeocode(latitude: Double,
                         longitude: Double,
                         resultsCount: Int? = 10,
@@ -192,6 +274,10 @@ public class DadataSuggestions {
         fetchResponse(withQuery: ReverseGeocodeQuery(latitude: latitude, longitude: longitude), completionHandler: completion)
     }
     
+    ///Reverse geocode request with custom `ReverseGeocodeQuery`.
+    ///
+    ///- Parameter query: Query object.
+    ///- Parameter completion: Result handler.
     public func reverseGeocode(_ query: ReverseGeocodeQuery, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
         fetchResponse(withQuery: query, completionHandler: completion)
     }
