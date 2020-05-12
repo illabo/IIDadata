@@ -16,6 +16,8 @@ public class DadataSuggestions {
     ///```
     ///- Parameter apiKey: Dadata API token. Check it in account settings at dadata.ru.
     ///- Parameter secret: Dadata secret key. Check it in account settings at dadata.ru.
+    ///
+    ///- Throws: May throw on connectivity problems, missing or wrong API token, limits exeeded, wrong endpoint.
     public convenience init(apiKey: String, secret: String) throws {
         self.init(apiKey: apiKey)
         try checkAPIConnectivity(withSecret: secret)
