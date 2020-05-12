@@ -1,0 +1,16 @@
+PODS:
+  - IIDadata (0.1.0)
+
+DEPENDENCIES:
+  - IIDadata (from `../`)
+
+EXTERNAL SOURCES:
+  IIDadata:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  IIDadata: 82942cfec09a9b16a11b27f286beb6ec91d1c48e
+
+PODFILE CHECKSUM: f817c953e29a8175cfbd6758b332b6c9396b627e
+
+COCOAPODS: 1.9.1

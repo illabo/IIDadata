@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  IIDadata
 //
-//  Created by Ilya Yachin on 05/12/2020.
+//  Created by Ilya Yachin on 05/11/2020.
 //  Copyright (c) 2020 Ilya Yachin. All rights reserved.
 //
 
@@ -14,7 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         return true
     }

@@ -1,0 +1,6 @@
+framework module Pods_IIDadata_Example {
+  umbrella header "Pods-IIDadata_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,6 @@
+framework module Pods_IIDadata_Tests {
+  umbrella header "Pods-IIDadata_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
