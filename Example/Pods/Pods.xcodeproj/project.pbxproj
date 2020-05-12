@@ -354,8 +354,8 @@
 				LastUpgradeCheck = 1140;
 				TargetAttributes = {
 					9E4E44535D2AAF7D4D50D9B116184A16 = {
-						DevelopmentTeam = 96ZSYGS638;
 						LastSwiftMigration = 1140;
+						ProvisioningStyle = Manual;
 					};
 				};
 			};
@@ -457,13 +457,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 4A5A42C27736F31FB57EEB846FB7E175 /* IIDadata.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 96ZSYGS638;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -475,6 +477,8 @@
 				MODULEMAP_FILE = "Target Support Files/IIDadata/IIDadata.modulemap";
 				PRODUCT_MODULE_NAME = IIDadata;
 				PRODUCT_NAME = IIDadata;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -747,13 +751,15 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0C0B30E0B1D33C6B791078BC6263BA80 /* IIDadata.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = 96ZSYGS638;
+				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -765,6 +771,8 @@
 				MODULEMAP_FILE = "Target Support Files/IIDadata/IIDadata.modulemap";
 				PRODUCT_MODULE_NAME = IIDadata;
 				PRODUCT_NAME = IIDadata;
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=macosx*]" = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
