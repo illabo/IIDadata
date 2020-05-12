@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'IIDadata_Example' do
+  pod 'IIDadata', :path => '../'
+
+  target 'IIDadata_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
