@@ -4,7 +4,7 @@
 [![License](https://img.shields.io/cocoapods/l/IIDadata.svg?style=flat)](https://cocoapods.org/pods/IIDadata)
 [![Platform](https://img.shields.io/cocoapods/p/IIDadata.svg?style=flat)](https://cocoapods.org/pods/IIDadata)
 
-This package provides access to Dadata address suggestions and reverce geocoding APIs. 
+This package provides access to Dadata address suggestions and reverse geocoding APIs. 
 
 Basic usage.
 ```
