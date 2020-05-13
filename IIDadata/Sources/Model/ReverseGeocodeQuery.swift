@@ -44,4 +44,12 @@ public class ReverseGeocodeQuery: Encodable, DadataQueryProtocol{
     }
     
     func queryEndpoint() -> String { return endpoint }
+    
+    enum CodingKeys: String, CodingKey {
+        case latitude = "lat"
+        case longitude = "lon"
+        case resultsCount = "count"
+        case language
+        case searchRadius = "radius_meters"
+    }
 }
