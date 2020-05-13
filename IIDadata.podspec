@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
 
   s.homepage         = 'https://github.com/illabo/IIDadata'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
+  s.license          = { :type => 'MIT', :file => './LICENSE' }
   s.author           = { 'Ilya Yachin' => 'uin153974748@gmail.com' }
   s.source           = { :git => 'https://github.com/illabo/IIDadata.git', :tag => s.version.to_s }
 
