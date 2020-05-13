@@ -5,22 +5,31 @@ public class DadataSuggestions {
     private var suggestionsAPIURL: URL
     private static var sharedInstance: DadataSuggestions?
     
-    ///This init checks connectivity once class instance is set.
+    ///New instance of DadataSuggestions.
     ///
-    ///This init should not be called on main thread as it may take up to 5+ seconds as it makes request to server in blocking manner.
-    ///Throws if connection is impossible.
+    ///Call may throw if there isn't a value for key "IIDadataAPIToken" set in Info.plist.
+    public convenience init() throws {
+        let key = try DadataSuggestions.readAPIKeyFromPlist()
+        self.init(apiKey: key)
+    }
+    
+    ///This init checks connectivity once the class instance is set.
+    ///
+    ///This init should not be called on main thread as it may take up long time as it makes request to server in a blocking manner.
+    ///Throws if connection is impossible or request is timed out.
     ///```
     ///DispatchQueue.global(qos: .background).async {
-    ///    let dadata = try DadataSuggestions(apiKey: "*Dadata API token*", secret: "*Dadata secret key*")
+    ///    let dadata = try DadataSuggestions(apiKey: "<# Dadata API token #>", checkWithTimeout: 15)
     ///}
     ///```
     ///- Parameter apiKey: Dadata API token. Check it in account settings at dadata.ru.
-    ///- Parameter secret: Dadata secret key. Check it in account settings at dadata.ru.
+    ///- Parameter checkWithTimeout: Time in seconds to wait for response.
     ///
     ///- Throws: May throw on connectivity problems, missing or wrong API token, limits exeeded, wrong endpoint.
-    public convenience init(apiKey: String, secret: String) throws {
+    ///May throw if request is timed out.
+    public convenience init(apiKey: String, checkWithTimeout timeout: Int) throws {
         self.init(apiKey: apiKey)
-        try checkAPIConnectivity(withSecret: secret)
+        try checkAPIConnectivity(timeout: timeout)
     }
     
     ///New instance of DadataSuggestions.
@@ -44,43 +53,39 @@ public class DadataSuggestions {
     public static func shared(apiKey: String? = nil) throws -> DadataSuggestions {
         if let instance = sharedInstance, instance.apiKey == apiKey || apiKey == nil { return instance }
         
-        var dictionary: NSDictionary?
-        if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
-            dictionary = NSDictionary(contentsOfFile: path)
-        }
+        
         if let key = apiKey { sharedInstance = DadataSuggestions(apiKey: key); return sharedInstance! }
         
-        guard let key = dictionary?.value(forKey: Constants.infoPlistTokenKey) as? String else {
-            throw NSError(domain: "Dadata API key missing in Info.plist", code: 1, userInfo: nil )
-        }
+        let key = try readAPIKeyFromPlist()
         sharedInstance = DadataSuggestions(apiKey: key)
         return sharedInstance!
     }
     
-    private func checkAPIConnectivity(withSecret secret: String) throws {
-        let url = URL(string: Constants.checkConnectivityURL)!
-        var request = createRequest(url:url)
-        request.addValue(secret, forHTTPHeaderField: "X-Secret")
-        request.timeoutInterval = 5
+    private static func readAPIKeyFromPlist() throws -> String {
+        var dictionary: NSDictionary?
+        if let path = Bundle.main.path(forResource: "Info", ofType: "plist") {
+            dictionary = NSDictionary(contentsOfFile: path)
+        }
+        guard let key = dictionary?.value(forKey: Constants.infoPlistTokenKey) as? String else {
+            throw NSError(domain: "Dadata API key missing in Info.plist", code: 1, userInfo: nil )
+        }
+        return key
+    }
+    
+    private func checkAPIConnectivity(timeout: Int) throws {
+        var request = createRequest(url:suggestionsAPIURL.appendingPathComponent(Constants.addressEndroint))
+        request.timeoutInterval = TimeInterval(timeout)
         
         let semaphore = DispatchSemaphore.init(value: 0)
         var errorValue: Error?
         
         let session = URLSession.shared
-        session.dataTask(with: request){_,response,error in
+        session.dataTask(with: request){[weak self] data,response,error in
             defer { semaphore.signal() }
             if error != nil { errorValue = error; return }
-            if let code = (response as? HTTPURLResponse)?.statusCode {
-                switch code{
-                case 401:
-                    errorValue = NSError(domain: "Wrong Dadata API Token", code: code, userInfo: nil)
-                case 403:
-                    errorValue = NSError(domain: "Dadata API limits exceeded", code: code, userInfo: nil)
-                case 404:
-                    errorValue = NSError(domain: "Wrong URL", code: code, userInfo: nil)
-                default:
-                    errorValue = nil
-                }
+            if let response = (response as? HTTPURLResponse), (200...299 ~= response.statusCode) == false {
+                errorValue = self?.nonOKResponseToError(response: response, body: data)
+                return
             }
         }.resume()
         
@@ -97,6 +102,17 @@ public class DadataSuggestions {
         request.addValue("application/json; charset=utf-8", forHTTPHeaderField: "Content-Type")
         request.addValue("Token " + apiKey, forHTTPHeaderField: "Authorization")
         return request
+    }
+    
+    private func nonOKResponseToError(response: HTTPURLResponse, body data: Data?)->Error{
+        let code = response.statusCode
+        var info: [String: Any] = [:]
+        response.allHeaderFields.forEach{ if let k = $0.key as? String { info[k] = $0.value } }
+        if let data = data {
+            let object = try? JSONSerialization.jsonObject(with: data, options: []) as? [AnyHashable: Any]
+            object?.forEach{ if let k = $0.key as? String { info[k] = $0.value } }
+        }
+        return NSError(domain: "HTTP Status \(HTTPURLResponse.localizedString(forStatusCode: code))", code: code, userInfo: info)
     }
     
     ///Basic address suggestions request with only rquired data.
