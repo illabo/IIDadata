@@ -7,7 +7,11 @@ public class DadataSuggestions {
     
     ///New instance of DadataSuggestions.
     ///
-    ///Call may throw if there isn't a value for key "IIDadataAPIToken" set in Info.plist.
+    ///
+    ///Required API key is read from Info.plist. Each init creates new instance using same token.
+    ///If DadataSuggestions is used havily consider `DadataSuggestions.shared()` instead.
+    ///- Precondition: Token set with "IIDadataAPIToken"  key in Info.plist.
+    ///- Throws: Call may throw if there isn't a value for key "IIDadataAPIToken" set in Info.plist.
     public convenience init() throws {
         let key = try DadataSuggestions.readAPIKeyFromPlist()
         self.init(apiKey: key)

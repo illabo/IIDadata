@@ -1,0 +1,1185 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>DadataSuggestions Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/DadataSuggestions" class="dashAnchor"></a>
+    <a title="DadataSuggestions Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">IIDadata 0.1.2 Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">IIDadata Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        DadataSuggestions Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:8IIDadata22AddressSuggestionQueryC">AddressSuggestionQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DadataSuggestions.html">DadataSuggestions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:8IIDadata19ReverseGeocodeQueryC">ReverseGeocodeQuery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AddressQueryType.html">AddressQueryType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/QueryResultLanguage.html">QueryResultLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ScaleLevel.html">ScaleLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:8IIDadata22AddressQueryConstraintV">AddressQueryConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AddressSuggestionData.html">AddressSuggestionData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/AddressSuggestions.html">AddressSuggestions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Metro.html">Metro</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs.html#/s:8IIDadata14RegionPriorityV">RegionPriority</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>DadataSuggestions</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">DadataSuggestions</span></code></pre>
+
+                </div>
+              </div>
+            <p>Undocumented</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsCACyKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsCACyKcfc">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>New instance of DadataSuggestions.</p>
+
+<p>Required API key is read from Info.plist. Each init creates new instance using same token.
+If DadataSuggestions is used havily consider <code>DadataSuggestions.shared()</code> instead.</p>
+<div class="aside aside-precondition">
+    <p class="aside-title">Precondition</p>
+    Token set with &ldquo;IIDadataAPIToken&rdquo;  key in Info.plist.
+
+</div><div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    Call may throw if there isn&rsquo;t a value for key &ldquo;IIDadataAPIToken&rdquo; set in Info.plist.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC6apiKey16checkWithTimeoutACSS_SitKcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(apiKey:checkWithTimeout:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC6apiKey16checkWithTimeoutACSS_SitKcfc">init(apiKey:<wbr>checkWithTimeout:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This init checks connectivity once the class instance is set.</p>
+
+<p>This init should not be called on main thread as it may take up long time as it makes request to server in a blocking manner.
+Throws if connection is impossible or request is timed out.</p>
+<pre class="highlight swift"><code><span class="kt">DispatchQueue</span><span class="o">.</span><span class="nf">global</span><span class="p">(</span><span class="nv">qos</span><span class="p">:</span> <span class="o">.</span><span class="n">background</span><span class="p">)</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">dadata</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">DadataSuggestions</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="s">"&lt;# Dadata API token #&gt;"</span><span class="p">,</span> <span class="nv">checkWithTimeout</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>May throw on connectivity problems, missing or wrong API token, limits exeeded, wrong endpoint.
+May throw if request is timed out.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">checkWithTimeout</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dadata API token. Check it in account settings at dadata.ru.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>checkWithTimeout</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Time in seconds to wait for response.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC6apiKeyACSS_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(apiKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC6apiKeyACSS_tcfc">init(apiKey:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>New instance of DadataSuggestions.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">convenience</span> <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>DadataSuggestions API token. Check it in account settings at dadata.ru.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC6shared6apiKeyACSSSg_tKFZ"></a>
+                    <a name="//apple_ref/swift/Method/shared(apiKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC6shared6apiKeyACSSSg_tKFZ">shared(apiKey:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Get shared instance of DadataSuggestions class.</p>
+
+<p>Call may throw if neither apiKey parameter is provided
+nor a value for key &ldquo;IIDadataAPIToken&rdquo; is set in Info.plist
+whenever shared instance weren&rsquo;t instantiated earlier.
+If another apiKey provided new shared instance of DadataSuggestions recreated with the provided API token.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">shared</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">DadataSuggestions</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>apiKey</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dadata API token. Check it in account settings at dadata.ru.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC14suggestAddress_10completionySS_ys6ResultOyAA0E18SuggestionResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/suggestAddress(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC14suggestAddress_10completionySS_ys6ResultOyAA0E18SuggestionResponseVs5Error_pGctF">suggestAddress(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Basic address suggestions request with only rquired data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">suggestAddress</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Query string to send to API. String of a free-form e.g. address part.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC14suggestAddress_9queryType12resultsCount8language11constraints14regionPriority15upperScaleLimit05loweroP016trimRegionResult10completionySS_AA0e5QueryG0OSiSgAA0vT8LanguageOSgSayAA0eV10ConstraintVGSgSayAA0sM0VGSgAA0O5LevelOSgA2_Sbys0T0OyAA0E18SuggestionResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/suggestAddress(_:queryType:resultsCount:language:constraints:regionPriority:upperScaleLimit:lowerScaleLimit:trimRegionResult:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC14suggestAddress_9queryType12resultsCount8language11constraints14regionPriority15upperScaleLimit05loweroP016trimRegionResult10completionySS_AA0e5QueryG0OSiSgAA0vT8LanguageOSgSayAA0eV10ConstraintVGSgSayAA0sM0VGSgAA0O5LevelOSgA2_Sbys0T0OyAA0E18SuggestionResponseVs5Error_pGctF">suggestAddress(_:<wbr>queryType:<wbr>resultsCount:<wbr>language:<wbr>constraints:<wbr>regionPriority:<wbr>upperScaleLimit:<wbr>lowerScaleLimit:<wbr>trimRegionResult:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Address suggestions request.</p>
+
+<p>Limitations, filters and constraints may be applied to query.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">suggestAddress</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">queryType</span><span class="p">:</span> <span class="kt"><a href="../Enums/AddressQueryType.html">AddressQueryType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">address</span><span class="p">,</span>
+                    <span class="nv">resultsCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="nv">language</span><span class="p">:</span> <span class="kt"><a href="../Enums/QueryResultLanguage.html">QueryResultLanguage</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">constraints</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs.html#/s:8IIDadata22AddressQueryConstraintV">AddressQueryConstraint</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">regionPriority</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Structs.html#/s:8IIDadata14RegionPriorityV">RegionPriority</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">upperScaleLimit</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScaleLevel.html">ScaleLevel</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">lowerScaleLimit</span><span class="p">:</span> <span class="kt"><a href="../Enums/ScaleLevel.html">ScaleLevel</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">trimRegionResult</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Query string to send to API. String of a free-form e.g. address part.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queryType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Lets select whether the request type. There are 3 query types available:
+<code>address</code> — standart address suggestion query;
+<code>fiasOnly</code> — query to only search in FIAS database: less matches, state provided address data only;
+<code>findByID</code> — takes KLADR or FIAS ID as a qury parameter to lookup additional data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultsCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many suggestions to return. <code>1</code> provides more data on a single object
+including latitude and longitude. <code>20</code> is a maximum value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>language</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Suggested results may be in Russian or English.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constraints</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>List of <code><a href="../Structs.html#/s:8IIDadata22AddressQueryConstraintV">AddressQueryConstraint</a></code> objects to filter results.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>regionPriority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>List of RegionPriority objects to prefer in lookup.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upperScaleLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bigger <code><a href="../Enums/ScaleLevel.html">ScaleLevel</a></code> object in pair of scale limits.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lowerScaleLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Smaller <code><a href="../Enums/ScaleLevel.html">ScaleLevel</a></code> object in pair of scale limits.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trimRegionResult</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Remove region and city names from suggestion top level.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC14suggestAddress_9queryType12resultsCount8language11constraints14regionPriority15upperScaleLimit05loweroP016trimRegionResult10completionySS_AA0e5QueryG0OSiSgSSSgSaySSGSgAs2QSbys0T0OyAA0E18SuggestionResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/suggestAddress(_:queryType:resultsCount:language:constraints:regionPriority:upperScaleLimit:lowerScaleLimit:trimRegionResult:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC14suggestAddress_9queryType12resultsCount8language11constraints14regionPriority15upperScaleLimit05loweroP016trimRegionResult10completionySS_AA0e5QueryG0OSiSgSSSgSaySSGSgAs2QSbys0T0OyAA0E18SuggestionResponseVs5Error_pGctF">suggestAddress(_:<wbr>queryType:<wbr>resultsCount:<wbr>language:<wbr>constraints:<wbr>regionPriority:<wbr>upperScaleLimit:<wbr>lowerScaleLimit:<wbr>trimRegionResult:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Address suggestions request.</p>
+
+<p>Allows to pass most of arguments as a strings converting to internally used classes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">suggestAddress</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">queryType</span><span class="p">:</span> <span class="kt"><a href="../Enums/AddressQueryType.html">AddressQueryType</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">address</span><span class="p">,</span>
+                    <span class="nv">resultsCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="nv">language</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">constraints</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">regionPriority</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">upperScaleLimit</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">lowerScaleLimit</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">trimRegionResult</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+                    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Query string to send to API. String of a free-form e.g. address part.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queryType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Lets select whether the request type. There are 3 query types available:
+<code>address</code> — standart address suggestion query;
+<code>fiasOnly</code> — query to only search in FIAS database: less matches, state provided address data only;
+<code>findByID</code> — takes KLADR or FIAS ID as a qury parameter to lookup additional data.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultsCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many suggestions to return. <code>1</code> provides more data on a single object
+including latitude and longitude. <code>20</code> is a maximum value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>language</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Suggested results in &ldquo;ru&rdquo; — Russian or &ldquo;en&rdquo; — English.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>constraints</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Literal JSON string formated according to
+<a href="https://confluence.hflabs.ru/pages/viewpage.action?pageId=204669108">Dadata online API documentation</a>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>regionPriority</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>List of regions&rsquo; KLADR IDs to prefer in lookup as shown in
+<a href="https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795">Dadata online API documentation</a>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upperScaleLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Bigger sized object in pair of scale limits.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>lowerScaleLimit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Smaller sized object in pair of scale limits. Both can take following values:
+<code>country</code> — Страна,
+<code>region</code> — Регион,
+<code>area</code> — Район,
+<code>city</code> — Город,
+<code>settlement</code> — Населенный пункт,
+<code>street</code> — Улица,
+<code>house</code> — Дом,
+<code>country</code> — Страна,</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>trimRegionResult</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Remove region and city names from suggestion top level.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC22suggestAddressFromFIAS_10completionySS_ys6ResultOyAA0E18SuggestionResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/suggestAddressFromFIAS(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC22suggestAddressFromFIAS_10completionySS_ys6ResultOyAA0E18SuggestionResponseVs5Error_pGctF">suggestAddressFromFIAS(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Basic address suggestions request to only search in FIAS database: less matches, state provided address data only.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">suggestAddressFromFIAS</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Query string to send to API. String of a free-form e.g. address part.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC18suggestByKLADRFIAS_10completionySS_ys6ResultOyAA25AddressSuggestionResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/suggestByKLADRFIAS(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC18suggestByKLADRFIAS_10completionySS_ys6ResultOyAA25AddressSuggestionResponseVs5Error_pGctF">suggestByKLADRFIAS(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Basic address suggestions request takes KLADR or FIAS ID as a qury parameter to lookup additional data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">suggestByKLADRFIAS</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>KLADR or FIAS ID.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC14suggestAddress_10completionyAA0E15SuggestionQueryC_ys6ResultOyAA0eG8ResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/suggestAddress(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC14suggestAddress_10completionyAA0E15SuggestionQueryC_ys6ResultOyAA0eG8ResponseVs5Error_pGctF">suggestAddress(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Address suggestion request with custom <code><a href="../Classes.html#/s:8IIDadata22AddressSuggestionQueryC">AddressSuggestionQuery</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">suggestAddress</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:8IIDadata22AddressSuggestionQueryC">AddressSuggestionQuery</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Query object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC14reverseGeocode5query9delimeter12resultsCount8language12searchRadius10completionySS_SJSiSgSSSgAKys6ResultOyAA25AddressSuggestionResponseVs5Error_pGctKF"></a>
+                    <a name="//apple_ref/swift/Method/reverseGeocode(query:delimeter:resultsCount:language:searchRadius:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC14reverseGeocode5query9delimeter12resultsCount8language12searchRadius10completionySS_SJSiSgSSSgAKys6ResultOyAA25AddressSuggestionResponseVs5Error_pGctKF">reverseGeocode(query:<wbr>delimeter:<wbr>resultsCount:<wbr>language:<wbr>searchRadius:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reverse Geocode request with latitude and longitude as a single string.</p>
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    <p>May throw if query is malformed.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reverseGeocode</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span>
+                    <span class="nv">delimeter</span><span class="p">:</span> <span class="kt">Character</span> <span class="o">=</span> <span class="s">","</span><span class="p">,</span>
+                    <span class="nv">resultsCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="nv">language</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="s">"ru"</span><span class="p">,</span>
+                    <span class="nv">searchRadius</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">Void</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Latitude and longitude as a string. Should have single character separator.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delimeter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Character to separate latitude and longitude. Defaults to &lsquo;<code>,</code>&rsquo;</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultsCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many suggestions to return. <code>1</code> provides more data on a single object
+including latitude and longitude. <code>20</code> is a maximum value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>language</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Suggested results in &ldquo;ru&rdquo; — Russian or &ldquo;en&rdquo; — English.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchRadius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Radius to suggest objects nearest to coordinates point.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC14reverseGeocode8latitude9longitude12resultsCount8language12searchRadius10completionySd_SdSiSgAA19QueryResultLanguageOSgAKys0O0OyAA25AddressSuggestionResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/reverseGeocode(latitude:longitude:resultsCount:language:searchRadius:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC14reverseGeocode8latitude9longitude12resultsCount8language12searchRadius10completionySd_SdSiSgAA19QueryResultLanguageOSgAKys0O0OyAA25AddressSuggestionResponseVs5Error_pGctF">reverseGeocode(latitude:<wbr>longitude:<wbr>resultsCount:<wbr>language:<wbr>searchRadius:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reverse Geocode request with latitude and longitude as a single string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reverseGeocode</span><span class="p">(</span><span class="nv">latitude</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+                    <span class="nv">longitude</span><span class="p">:</span> <span class="kt">Double</span><span class="p">,</span>
+                    <span class="nv">resultsCount</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span>
+                    <span class="nv">language</span><span class="p">:</span> <span class="kt"><a href="../Enums/QueryResultLanguage.html">QueryResultLanguage</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">searchRadius</span><span class="p">:</span> <span class="kt">Int</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                    <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span><span class="o">-&gt;</span><span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>latitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Latitude.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>longitude</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Longitude.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resultsCount</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>How many suggestions to return. <code>1</code> provides more data on a single object
+including latitude and longitude. <code>20</code> is a maximum value.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>language</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Suggested results may be in Russian or English.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>searchRadius</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Radius to suggest objects nearest to coordinates point.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:8IIDadata17DadataSuggestionsC14reverseGeocode_10completionyAA07ReverseE5QueryC_ys6ResultOyAA25AddressSuggestionResponseVs5Error_pGctF"></a>
+                    <a name="//apple_ref/swift/Method/reverseGeocode(_:completion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:8IIDadata17DadataSuggestionsC14reverseGeocode_10completionyAA07ReverseE5QueryC_ys6ResultOyAA25AddressSuggestionResponseVs5Error_pGctF">reverseGeocode(_:<wbr>completion:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Reverse geocode request with custom <code><a href="../Classes.html#/s:8IIDadata19ReverseGeocodeQueryC">ReverseGeocodeQuery</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reverseGeocode</span><span class="p">(</span><span class="n">_</span> <span class="nv">query</span><span class="p">:</span> <span class="kt"><a href="../Classes.html#/s:8IIDadata19ReverseGeocodeQueryC">ReverseGeocodeQuery</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Result</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a></span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>query</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Query object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Result handler.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/illabo/IIDadata" target="_blank" rel="external">Ilya Yachin</a>. All rights reserved. (Last updated: 2020-05-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

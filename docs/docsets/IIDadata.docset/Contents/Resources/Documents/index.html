@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>IIDadata  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="IIDadata  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">IIDadata 0.1.2 Docs</a> (9% documented)</p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">IIDadata Reference</a>
+        <img id="carat" src="img/carat.png" />
+        IIDadata  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:8IIDadata22AddressSuggestionQueryC">AddressSuggestionQuery</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DadataSuggestions.html">DadataSuggestions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:8IIDadata19ReverseGeocodeQueryC">ReverseGeocodeQuery</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AddressQueryType.html">AddressQueryType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/QueryResultLanguage.html">QueryResultLanguage</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/ScaleLevel.html">ScaleLevel</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:8IIDadata22AddressQueryConstraintV">AddressQueryConstraint</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AddressSuggestionData.html">AddressSuggestionData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AddressSuggestionResponse.html">AddressSuggestionResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/AddressSuggestions.html">AddressSuggestions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/Metro.html">Metro</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs.html#/s:8IIDadata14RegionPriorityV">RegionPriority</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <h1 id='iidadata' class='heading'>IIDadata</h1>
+
+<p><a href="https://cocoapods.org/pods/IIDadata"><img src="https://img.shields.io/cocoapods/v/IIDadata.svg?style=flat" alt="Version"></a>
+<a href="https://cocoapods.org/pods/IIDadata"><img src="https://img.shields.io/cocoapods/l/IIDadata.svg?style=flat" alt="License"></a>
+<a href="https://cocoapods.org/pods/IIDadata"><img src="https://img.shields.io/cocoapods/p/IIDadata.svg?style=flat" alt="Platform"></a></p>
+
+<p>This package provides access to Dadata address suggestions and reverse geocoding APIs. </p>
+<h3 id='basic-usage' class='heading'>Basic usage.</h3>
+<pre class="highlight swift"><code><span class="k">try!</span> <span class="kt">DadataSuggestions</span>
+    <span class="o">.</span><span class="nf">shared</span><span class="p">(</span>
+        <span class="nv">apiKey</span><span class="p">:</span> <span class="s">"&lt;# Dadata API token #&gt;"</span>
+<span class="p">)</span><span class="o">.</span><span class="nf">suggestAddress</span><span class="p">(</span>
+        <span class="s">"Пенза"</span>
+        <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="n">r</span> <span class="k">in</span>
+            <span class="k">switch</span> <span class="n">r</span> <span class="p">{</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">v</span><span class="p">):</span>
+                <span class="nf">print</span><span class="p">(</span><span class="n">v</span><span class="p">)</span>
+            <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">e</span><span class="p">):</span>
+                <span class="nf">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
+            <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">)</span>
+</code></pre>
+
+<hr>
+<h3 id='there-are-a-bunch-of-additional-init-options' class='heading'>There are a bunch of additional init options</h3>
+
+<p>Ranging from init with explicit API token.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">dadata</span> <span class="o">=</span> <span class="kt">DadataSuggestions</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="s">"&lt;# Dadata API token #&gt;"</span><span class="p">)</span>
+</code></pre>
+
+<p>Through init with an API token from Info.plist. But may throw if it&rsquo;s missing.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">dadata</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">DadataSuggestions</span><span class="p">()</span>
+</code></pre>
+
+<p>Even to init with check on connectivity.
+However this init should not be called on main thread as it may take up long time as it makes request to server in a blocking manner.
+Throws if connection is impossible or request is timed out.</p>
+<pre class="highlight swift"><code><span class="kt">DispatchQueue</span><span class="o">.</span><span class="nf">global</span><span class="p">(</span><span class="nv">qos</span><span class="p">:</span> <span class="o">.</span><span class="n">background</span><span class="p">)</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">dadata</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="kt">DadataSuggestions</span><span class="p">(</span><span class="nv">apiKey</span><span class="p">:</span> <span class="s">"&lt;# Dadata API token #&gt;"</span><span class="p">,</span> <span class="nv">checkWithTimeout</span><span class="p">:</span> <span class="mi">15</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+
+<hr>
+<h3 id='regardless-of-the-way-you-init-theris-more-to-do-with-this-library' class='heading'>Regardless of the way you init theris more to do with this library</h3>
+
+<p>Basic address suggestions request to only search in FIAS database: less matches, state provided address data only.</p>
+<pre class="highlight swift"><code><span class="n">dadata</span><span class="p">?</span><span class="o">.</span><span class="nf">suggestAddressFromFIAS</span><span class="p">(</span><span class="s">"Тверская обл, Пеновский р-н, деревня Москва"</span><span class="p">){</span> <span class="nf">print</span><span class="p">(</span> <span class="k">try</span><span class="p">?</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span><span class="o">.</span><span class="n">suggestions</span> <span class="p">)</span> <span class="p">}</span>
+</code></pre>
+
+<hr>
+
+<p>Basic address suggestions request takes KLADR or FIAS ID as a qury parameter to lookup additional data.</p>
+<pre class="highlight swift"><code><span class="n">dadata</span><span class="p">?</span><span class="o">.</span><span class="nf">suggestByKLADRFIAS</span><span class="p">(</span><span class="s">"9120b43f-2fae-4838-a144-85e43c2bfb29"</span><span class="p">){</span> <span class="nf">print</span><span class="p">(</span> <span class="k">try</span><span class="p">?</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span><span class="o">.</span><span class="n">suggestions</span> <span class="p">)</span> <span class="p">}</span>
+</code></pre>
+
+<hr>
+
+<p>However more elaborate queries could be made by providing constraints and/or setting filtering.</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">constraint</span> <span class="o">=</span> <span class="kt">AddressQueryConstraint</span><span class="p">()</span>
+<span class="n">constraint</span><span class="o">.</span><span class="n">region</span> <span class="o">=</span> <span class="s">"Приморский"</span>
+<span class="n">constraint</span><span class="o">.</span><span class="n">city</span> <span class="o">=</span> <span class="s">"Владивосток"</span>
+<span class="n">constraint</span><span class="o">.</span><span class="n">country_iso_code</span> <span class="o">=</span> <span class="s">"RU"</span>
+<span class="n">constraint</span><span class="o">.</span><span class="n">region_iso_code</span> <span class="o">=</span> <span class="s">"RU-PRI"</span>
+
+<span class="n">dadata</span><span class="p">?</span><span class="o">.</span><span class="nf">suggestAddress</span><span class="p">(</span>
+    <span class="s">"Gogolya 9"</span><span class="p">,</span>
+    <span class="nv">resultsCount</span><span class="p">:</span> <span class="mi">5</span><span class="p">,</span>
+    <span class="nv">language</span><span class="p">:</span> <span class="o">.</span><span class="n">en</span><span class="p">,</span>
+    <span class="nv">constraints</span><span class="p">:</span> <span class="p">[</span><span class="n">constraint</span><span class="p">],</span>
+    <span class="nv">regionPriority</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span>
+    <span class="nv">upperScaleLimit</span><span class="p">:</span> <span class="o">.</span><span class="n">street</span><span class="p">,</span>
+    <span class="nv">lowerScaleLimit</span><span class="p">:</span> <span class="o">.</span><span class="n">house</span><span class="p">,</span>
+    <span class="nv">trimRegionResult</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+    <span class="nv">completion</span><span class="p">:</span> <span class="n">completion</span>
+<span class="p">)</span>
+</code></pre>
+
+<p>Or building <code><a href="Classes.html#/s:8IIDadata22AddressSuggestionQueryC">AddressSuggestionQuery</a></code> manually. Note in this example it is a query made with FIAS ID instead of free-form text.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">q</span> <span class="o">=</span> <span class="kt">AddressSuggestionQuery</span><span class="p">(</span><span class="s">"9120b43f-2fae-4838-a144-85e43c2bfb29"</span><span class="p">,</span> <span class="nv">ofType</span><span class="p">:</span> <span class="o">.</span><span class="n">findByID</span><span class="p">)</span>
+<span class="n">q</span><span class="o">.</span><span class="n">resultsCount</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">q</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="o">.</span><span class="n">en</span>
+
+<span class="n">dadata</span><span class="p">?</span><span class="o">.</span><span class="nf">suggestAddress</span><span class="p">(</span><span class="n">q</span><span class="p">){</span> <span class="k">try</span><span class="p">?</span> <span class="nv">$0</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span><span class="o">.</span><span class="n">suggestions</span><span class="p">?</span><span class="o">.</span><span class="n">forEach</span><span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="nv">$0</span><span class="p">)</span> <span class="p">}</span> <span class="p">}</span>
+</code></pre>
+
+<hr>
+
+<p>Also reverse geocoding is available.</p>
+<pre class="highlight swift"><code><span class="k">try</span><span class="p">?</span> <span class="n">dadata</span><span class="p">?</span><span class="o">.</span><span class="nf">reverseGeocode</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="s">"52.2620898, 104.3203629"</span><span class="p">,</span>
+                            <span class="nv">delimeter</span><span class="p">:</span> <span class="s">","</span><span class="p">,</span>
+                            <span class="nv">resultsCount</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                            <span class="nv">language</span><span class="p">:</span><span class="s">"ru"</span><span class="p">,</span>
+                            <span class="nv">searchRadius</span><span class="p">:</span> <span class="mi">100</span><span class="p">){</span> <span class="n">r</span> <span class="k">in</span>
+                                <span class="k">let</span> <span class="nv">v</span> <span class="o">=</span> <span class="k">try</span><span class="p">?</span> <span class="n">r</span><span class="o">.</span><span class="nf">get</span><span class="p">()</span>
+                                <span class="k">if</span> <span class="k">let</span> <span class="nv">s</span> <span class="o">=</span> <span class="n">v</span><span class="p">?</span><span class="o">.</span><span class="n">suggestions</span><span class="p">,</span> <span class="n">s</span><span class="o">.</span><span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">{</span>
+                                    <span class="nf">print</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">value</span><span class="o">!</span><span class="se">)</span><span class="s">: LAT#</span><span class="se">\(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">!.</span><span class="n">geoLat</span><span class="o">!</span><span class="se">)</span><span class="s"> @ LON#</span><span class="se">\(</span><span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">data</span><span class="o">!.</span><span class="n">geoLon</span><span class="o">!</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+                                <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>More options you can find in Xcode Quick Help.</p>
+<h2 id='example' class='heading'>Example</h2>
+
+<p>To run the example project, clone the repo, and run <code>pod install</code> from the Example directory first.</p>
+<h2 id='installation' class='heading'>Installation</h2>
+
+<p>IIDadata is available through <a href="https://cocoapods.org">CocoaPods</a>. To install
+it, simply add the following line to your Podfile:</p>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'IIDadata'</span>
+</code></pre>
+
+<p>Or use Swift PM. Add the following line to your Package.swift file in the dependencies section:</p>
+<pre class="highlight plaintext"><code>.package(url: "https://github.com/illabo/IIDadata.git, from "0.1.0")
+</code></pre>
+<h2 id='license' class='heading'>License</h2>
+
+<p>IIDadata is available under the MIT license. See the LICENSE file for more info.</p>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; 2020 <a class="link" href="https://github.com/illabo/IIDadata" target="_blank" rel="external">Ilya Yachin</a>. All rights reserved. (Last updated: 2020-05-13)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.13.3</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
