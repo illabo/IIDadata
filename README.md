@@ -96,7 +96,8 @@ try? dadata?.reverseGeocode(query: "52.2620898, 104.3203629",
                                 }
 }
 ```
-More options you can find in Xcode Quick Help.
+## Documentation
+Project [documentation is available here]( https://illabo.github.io/IIDadata/).
 
 
 ## Example
@@ -114,7 +115,7 @@ pod 'IIDadata'
 
 Or use Swift PM. Add the following line to your Package.swift file in the dependencies section:
 ```
-.package(url: "https://github.com/illabo/IIDadata.git, from "0.1.0")
+.package(url: "https://github.com/illabo/IIDadata.git, from: "0.1.0")
 ```
 
 ## License
