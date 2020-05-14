@@ -13,7 +13,7 @@
     <a title="IIDadata  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">IIDadata 0.2.1 Docs</a> (14% documented)</p>
+        <p><a href="index.html">IIDadata 0.2.1 Docs</a> (22% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -30,13 +30,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes.html#/s:8IIDadata22AddressSuggestionQueryC">AddressSuggestionQuery</a>
+                <a href="Classes/AddressSuggestionQuery.html">AddressSuggestionQuery</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/DadataSuggestions.html">DadataSuggestions</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes.html#/s:8IIDadata19ReverseGeocodeQueryC">ReverseGeocodeQuery</a>
+                <a href="Classes/ReverseGeocodeQuery.html">ReverseGeocodeQuery</a>
               </li>
             </ul>
           </li>
@@ -161,7 +161,7 @@ Throws if connection is impossible or request is timed out.</p>
 <span class="p">)</span>
 </code></pre>
 
-<p>Or building <code><a href="Classes.html#/s:8IIDadata22AddressSuggestionQueryC">AddressSuggestionQuery</a></code> manually. Note in this example it is a query made with FIAS ID instead of free-form text.</p>
+<p>Or building <code><a href="Classes/AddressSuggestionQuery.html">AddressSuggestionQuery</a></code> manually. Note in this example it is a query made with FIAS ID instead of free-form text.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">q</span> <span class="o">=</span> <span class="kt">AddressSuggestionQuery</span><span class="p">(</span><span class="s">"9120b43f-2fae-4838-a144-85e43c2bfb29"</span><span class="p">,</span> <span class="nv">ofType</span><span class="p">:</span> <span class="o">.</span><span class="n">findByID</span><span class="p">)</span>
 <span class="n">q</span><span class="o">.</span><span class="n">resultsCount</span> <span class="o">=</span> <span class="mi">1</span>
 <span class="n">q</span><span class="o">.</span><span class="n">language</span> <span class="o">=</span> <span class="o">.</span><span class="n">en</span>

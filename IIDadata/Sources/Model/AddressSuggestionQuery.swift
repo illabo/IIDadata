@@ -21,7 +21,7 @@ public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
     
     ///New instance of AddressSuggestionQuery defaulting to simple address suggestions request.
     ///- Parameter query: Query string to be sent to API.
-    convenience init(_ query: String){
+    public convenience init(_ query: String){
         self.init(query, ofType: .address)
     }
     
@@ -32,7 +32,7 @@ public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
     ///`address` — standart address suggestion query;
     ///`fiasOnly` — query to only search in FIAS database: less matches, state provided address data only;
     ///`findByID` — takes KLADR or FIAS ID as a qury parameter to lookup additional data.
-    required init(_ query: String, ofType type: AddressQueryType){
+    public required init(_ query: String, ofType type: AddressQueryType){
         self.query = query
         self.queryType = type
     }

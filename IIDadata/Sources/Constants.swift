@@ -17,12 +17,14 @@ struct Constants {
     static let infoPlistTokenKey = "IIDadataAPIToken"
 }
 
+///API endpoints for different request types.
 public enum AddressQueryType: String {
     case address = "suggest/address"
     case fiasOnly = "suggest/fias"
     case findByID = "findById/address"
 }
 
+///Language of response.
 public enum QueryResultLanguage: String, Encodable {
     case ru = "ru"
     case en = "en"

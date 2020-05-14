@@ -20,7 +20,7 @@ public class ReverseGeocodeQuery: Encodable, DadataQueryProtocol{
     ///- Parameter query: Query should contain latitude and longitude of the point of interest.
     ///- Parameter delimeter: Single character delimeter to separate latitude and longitude.
     ///- Throws: May throw if parsing of latitude and longitude out of query fails.
-    convenience init(query: String, delimeter: Character = ",") throws {
+    public convenience init(query: String, delimeter: Character = ",") throws {
         let splitStr = query.split(separator: delimeter)
         
         let latStr = String(splitStr[0]).trimmingCharacters(in: .whitespacesAndNewlines)
@@ -41,7 +41,7 @@ public class ReverseGeocodeQuery: Encodable, DadataQueryProtocol{
     ///New instance of ReverseGeocodeQuery.
     ///- Parameter latitude: Latitude of the point of interest.
     ///- Parameter longitude: Longitude of the point of interest.
-    required init(latitude: Double, longitude: Double){
+    public required init(latitude: Double, longitude: Double){
         self.latitude = latitude
         self.longitude = longitude
         self.endpoint = Constants.revGeocodeEndpoint

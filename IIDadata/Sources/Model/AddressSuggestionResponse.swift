@@ -9,9 +9,13 @@ public struct AddressSuggestionResponse : Decodable {
 	public let suggestions : [AddressSuggestions]?
 }
 
+///Every single suggestion is represented as AddressSuggestions.
 public struct AddressSuggestions : Decodable {
+    ///Address in short format.
     public let value : String?
+    ///All the data returned in response to suggestion query.
     public let data : AddressSuggestionData?
+    ///Address in long format with region.
     public let unrestrictedValue : String?
     
     enum CodingKeys: String, CodingKey {
@@ -21,6 +25,7 @@ public struct AddressSuggestions : Decodable {
     }
 }
 
+///All the data returned in response to suggestion query.
 public struct AddressSuggestionData : Decodable {
     public let area : String?
     public let areaFiasId : String?
