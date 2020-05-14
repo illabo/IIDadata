@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'IIDadata'
-  s.version          = '0.2.1'
+  s.version          = '0.2.2'
   s.summary          = 'Dadata address suggestions and reverse geocoding APIs.'
 
   s.swift_versions   = '5.2'
