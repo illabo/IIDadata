@@ -1,5 +1,6 @@
 import Foundation
 
+///DadataSuggestions performs all the interactions with Dadata API.
 public class DadataSuggestions {
     private let apiKey: String
     private var suggestionsAPIURL: URL
@@ -37,7 +38,7 @@ public class DadataSuggestions {
     }
     
     ///New instance of DadataSuggestions.
-    ///- Parameter apiKey: DadataSuggestions API token. Check it in account settings at dadata.ru.
+    ///- Parameter apiKey: Dadata API token. Check it in account settings at dadata.ru.
     public convenience required init(apiKey: String) {
         self.init(apiKey: apiKey, url: Constants.suggestionsAPIURL)
     }

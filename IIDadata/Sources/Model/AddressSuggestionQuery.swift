@@ -7,6 +7,7 @@
 
 import Foundation
 
+///AddressSuggestionQuery represents an serializable object used to perform certain queries.
 public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
     let query: String
     let queryType: AddressQueryType
@@ -18,10 +19,19 @@ public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
     var lowerScaleLimit: ScaleBound?
     var trimRegionResult: Bool = false
     
+    ///New instance of AddressSuggestionQuery defaulting to simple address suggestions request.
+    ///- Parameter query: Query string to be sent to API.
     convenience init(_ query: String){
         self.init(query, ofType: .address)
     }
     
+    ///New instance of AddressSuggestionQuery.
+    ///- Parameter query: Query string to be sent to API.
+    ///- Parameter ofType: Type of request to send to API.
+    ///It could be of type
+    ///`address` — standart address suggestion query;
+    ///`fiasOnly` — query to only search in FIAS database: less matches, state provided address data only;
+    ///`findByID` — takes KLADR or FIAS ID as a qury parameter to lookup additional data.
     required init(_ query: String, ofType type: AddressQueryType){
         self.query = query
         self.queryType = type
@@ -38,6 +48,7 @@ public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
         case trimRegionResult = "restrict_value"
     }
     
+    ///Serializes AddressSuggestionQuery to send over the wire.
     func toJSON() throws -> Data {
         if constraints?.isEmpty ?? false { constraints = nil }
         if regionPriority?.isEmpty ?? false { regionPriority = nil }
@@ -50,9 +61,15 @@ public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
         return try JSONEncoder().encode(self)
     }
     
+    ///Returns an API endpoint for different request types:
+    ///`address` — "suggest/address"
+    ///`fiasOnly` — "suggest/fias"
+    ///`findByID` — "findById/address"
     func queryEndpoint() -> String { return queryType.rawValue }
 }
 
+///Levels of `from_bound` and `to_bound` according to
+///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795).
 public enum ScaleLevel: String, Encodable {
     case country = "country"
     case region = "region"
@@ -63,6 +80,8 @@ public enum ScaleLevel: String, Encodable {
     case house = "house"
 }
 
+///AddressQueryConstraint used to limit search results according to
+///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=204669108).
 public struct AddressQueryConstraint: Codable{
     var region: String?
     var city: String?
@@ -83,10 +102,14 @@ public struct AddressQueryConstraint: Codable{
     var street_fias_id: String?
 }
 
+///Helps prioritize specified region in search results by KLADR ID.
 public struct RegionPriority: Encodable{
     var kladr_id: String?
 }
 
+///ScaleBound holds a value for `from_bound` and `to_bound` as a ScaleLevel.
+///See
+///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795) for API reference.
 struct ScaleBound: Encodable{
     var value: ScaleLevel?
 }

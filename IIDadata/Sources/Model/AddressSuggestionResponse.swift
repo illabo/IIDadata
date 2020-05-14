@@ -4,6 +4,7 @@
 
 import Foundation
 
+///AddressSuggestionResponse represents a deserializable object used to hold API response.
 public struct AddressSuggestionResponse : Decodable {
 	public let suggestions : [AddressSuggestions]?
 }
