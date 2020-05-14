@@ -117,6 +117,8 @@ Or use Swift PM. Add the following line to your Package.swift file in the depend
 ```
 .package(url: "https://github.com/illabo/IIDadata.git, from: "0.1.0")
 ```
+## Misc
+[Pre- and post-commit hooks to autogenerate docs and create tag from Podspec version label when committing on release branch](https://gist.github.com/illabo/a3cf7577f2f3b1ca809dcb80f807a857)
 
 ## License
 
