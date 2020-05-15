@@ -294,7 +294,12 @@ public class DadataSuggestions {
                         language: QueryResultLanguage? = nil,
                         searchRadius: Int? = nil,
                         completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
-        fetchResponse(withQuery: ReverseGeocodeQuery(latitude: latitude, longitude: longitude), completionHandler: completion)
+        let geoquery = ReverseGeocodeQuery(latitude: latitude, longitude: longitude)
+        geoquery.resultsCount = resultsCount
+        geoquery.language = language
+        geoquery.searchRadius = searchRadius
+        
+        fetchResponse(withQuery: geoquery, completionHandler: completion)
     }
     
     ///Reverse geocode request with custom `ReverseGeocodeQuery`.
