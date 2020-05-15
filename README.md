@@ -1,9 +1,8 @@
 # IIDadata
 
 [![Version](https://img.shields.io/cocoapods/v/IIDadata.svg?style=flat)](https://cocoapods.org/pods/IIDadata)
-[![License](https://img.shields.io/cocoapods/l/IIDadata.svg?style=flat)](https://github.com/illabo/IIDadata/blob/master/LICENSE)
 [![Documentation](https://illabo.github.io/IIDadata/badge.svg)](https://illabo.github.io/IIDadata/)
-[![Platform](https://img.shields.io/cocoapods/p/IIDadata.svg?style=flat)](https://cocoapods.org/pods/IIDadata)
+[![License](https://img.shields.io/cocoapods/l/IIDadata.svg?style=flat)](https://github.com/illabo/IIDadata/blob/master/LICENSE)
 
 This package provides access to Dadata address suggestions and reverse geocoding APIs. 
 
