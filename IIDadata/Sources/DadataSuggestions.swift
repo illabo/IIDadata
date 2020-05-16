@@ -78,7 +78,7 @@ public class DadataSuggestions {
     }
     
     private func checkAPIConnectivity(timeout: Int) throws {
-        var request = createRequest(url:suggestionsAPIURL.appendingPathComponent(Constants.addressEndroint))
+        var request = createRequest(url:suggestionsAPIURL.appendingPathComponent(Constants.addressEndpoint))
         request.timeoutInterval = TimeInterval(timeout)
         
         let semaphore = DispatchSemaphore.init(value: 0)
