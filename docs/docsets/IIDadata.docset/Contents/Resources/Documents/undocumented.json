@@ -2,35 +2,35 @@
   "warnings": [
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Constants.swift",
-      "line": 22,
+      "line": 21,
       "symbol": "AddressQueryType.address",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Constants.swift",
-      "line": 23,
+      "line": 22,
       "symbol": "AddressQueryType.fiasOnly",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Constants.swift",
-      "line": 24,
+      "line": 23,
       "symbol": "AddressQueryType.findByID",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Constants.swift",
-      "line": 29,
+      "line": 28,
       "symbol": "QueryResultLanguage.ru",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Constants.swift",
-      "line": 30,
+      "line": 29,
       "symbol": "QueryResultLanguage.en",
       "symbol_kind": "source.lang.swift.decl.enumelement",
       "warning": "undocumented"

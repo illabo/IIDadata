@@ -77,7 +77,7 @@ public struct AddressSuggestionData : Decodable {
     public let houseType : String?
     public let houseTypeFull : String?
     public let kladrId : String?
-    public let metro : Metro?
+    public let metro : [Metro]?
     public let okato : String?
     public let oktmo : String?
     public let planningStructure : String?
