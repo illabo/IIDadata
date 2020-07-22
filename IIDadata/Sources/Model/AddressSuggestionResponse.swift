@@ -88,10 +88,10 @@ public struct AddressSuggestionData : Decodable {
     public let planningStructureWithType : String?
     public let postalBox : String?
     public let postalCode : String?
-    public let qc : String?
-    public let qcComplete : String?
-    public let qcGeo : String?
-    public let qcHouse : String?
+    public let qc : String? // Fix letter. Read it may be String or Int.
+    public let qcComplete : String? // Fix letter. Read it may be String or Int.
+    public let qcGeo : String? // Fix letter. Read it may be String or Int.
+    public let qcHouse : String? // Fix letter. Read it may be String or Int.
     public let region : String?
     public let regionFiasId : String?
     public let regionIsoCode : String?
@@ -215,5 +215,5 @@ public struct AddressSuggestionData : Decodable {
 public struct Metro: Decodable{
     public let name : String?
     public let line : String?
-    public let distance : String?
+    public let distance : Double?
 }
