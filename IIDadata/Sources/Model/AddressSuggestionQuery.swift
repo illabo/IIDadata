@@ -83,32 +83,68 @@ public enum ScaleLevel: String, Encodable {
 ///AddressQueryConstraint used to limit search results according to
 ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=204669108).
 public struct AddressQueryConstraint: Codable{
-    public var region: String?
-    public var city: String?
-    public var street_type_full: String?
-    public var settlement_type_full: String?
-    public var city_district_type_full: String?
-    public var city_type_full: String?
-    public var area_type_full: String?
-    public var region_type_full: String?
-    public var country: String?
-    public var country_iso_code: String?
-    public var region_iso_code: String?
-    public var kladr_id: String?
-    public var region_fias_id: String?
-    public var area_fias_id: String?
-    public var city_fias_id: String?
-    public var settlement_fias_id: String?
-    public var street_fias_id: String?
+    public var region                  : String?
+    public var city                    : String?
+    public var street_type_full        : String?
+    public var settlement_type_full    : String?
+    public var city_district_type_full : String?
+    public var city_type_full          : String?
+    public var area_type_full          : String?
+    public var region_type_full        : String?
+    public var country                 : String?
+    public var country_iso_code        : String?
+    public var region_iso_code         : String?
+    public var kladr_id                : String?
+    public var region_fias_id          : String?
+    public var area_fias_id            : String?
+    public var city_fias_id            : String?
+    public var settlement_fias_id      : String?
+    public var street_fias_id          : String?
     
-    public init(){}
+    public init(
+        region: String? = nil,
+        city: String? = nil,
+        street_type_full: String? = nil,
+        settlement_type_full: String? = nil,
+        city_district_type_full: String? = nil,
+        city_type_full: String? = nil,
+        area_type_full: String? = nil,
+        region_type_full: String? = nil,
+        country: String? = nil,
+        country_iso_code: String? = nil,
+        region_iso_code: String? = nil,
+        kladr_id: String? = nil,
+        region_fias_id: String? = nil,
+        area_fias_id: String? = nil,
+        city_fias_id: String? = nil,
+        settlement_fias_id: String? = nil,
+        street_fias_id: String? = nil
+    ) {
+        self.region = region
+        self.city = city
+        self.street_type_full = street_type_full
+        self.settlement_type_full = settlement_type_full
+        self.city_district_type_full = city_district_type_full
+        self.city_type_full = city_type_full
+        self.area_type_full = area_type_full
+        self.region_type_full = region_type_full
+        self.country = country
+        self.country_iso_code = country_iso_code
+        self.region_iso_code = region_iso_code
+        self.kladr_id = kladr_id
+        self.region_fias_id = region_fias_id
+        self.area_fias_id = area_fias_id
+        self.city_fias_id = city_fias_id
+        self.settlement_fias_id = settlement_fias_id
+        self.street_fias_id = street_fias_id
+    }
 }
 
 ///Helps prioritize specified region in search results by KLADR ID.
 public struct RegionPriority: Encodable{
     public var kladr_id: String?
     
-    public init(){}
+    public init(kladr_id: String?){ self.kladr_id = kladr_id }
 }
 
 ///ScaleBound holds a value for `from_bound` and `to_bound` as a ScaleLevel.
@@ -117,5 +153,5 @@ public struct RegionPriority: Encodable{
 public struct ScaleBound: Encodable{
     public var value: ScaleLevel?
     
-    public init(){}
+    public init(value: ScaleLevel?){ self.value = value }
 }

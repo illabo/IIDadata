@@ -37,6 +37,55 @@
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 14,
+      "symbol": "AddressSuggestionQuery.resultsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 15,
+      "symbol": "AddressSuggestionQuery.language",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 16,
+      "symbol": "AddressSuggestionQuery.constraints",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 17,
+      "symbol": "AddressSuggestionQuery.regionPriority",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 18,
+      "symbol": "AddressSuggestionQuery.upperScaleLimit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 19,
+      "symbol": "AddressSuggestionQuery.lowerScaleLimit",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 20,
+      "symbol": "AddressSuggestionQuery.trimRegionResult",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
       "line": 74,
       "symbol": "ScaleLevel.country",
       "symbol_kind": "source.lang.swift.decl.enumelement",
@@ -82,6 +131,160 @@
       "line": 80,
       "symbol": "ScaleLevel.house",
       "symbol_kind": "source.lang.swift.decl.enumelement",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 86,
+      "symbol": "AddressQueryConstraint.region",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 87,
+      "symbol": "AddressQueryConstraint.city",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 88,
+      "symbol": "AddressQueryConstraint.street_type_full",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 89,
+      "symbol": "AddressQueryConstraint.settlement_type_full",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 90,
+      "symbol": "AddressQueryConstraint.city_district_type_full",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 91,
+      "symbol": "AddressQueryConstraint.city_type_full",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 92,
+      "symbol": "AddressQueryConstraint.area_type_full",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 93,
+      "symbol": "AddressQueryConstraint.region_type_full",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 94,
+      "symbol": "AddressQueryConstraint.country",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 95,
+      "symbol": "AddressQueryConstraint.country_iso_code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 96,
+      "symbol": "AddressQueryConstraint.region_iso_code",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 97,
+      "symbol": "AddressQueryConstraint.kladr_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 98,
+      "symbol": "AddressQueryConstraint.region_fias_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 99,
+      "symbol": "AddressQueryConstraint.area_fias_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 100,
+      "symbol": "AddressQueryConstraint.city_fias_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 101,
+      "symbol": "AddressQueryConstraint.settlement_fias_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 102,
+      "symbol": "AddressQueryConstraint.street_fias_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 104,
+      "symbol": "AddressQueryConstraint.init(region:city:street_type_full:settlement_type_full:city_district_type_full:city_type_full:area_type_full:region_type_full:country:country_iso_code:region_iso_code:kladr_id:region_fias_id:area_fias_id:city_fias_id:settlement_fias_id:street_fias_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 145,
+      "symbol": "RegionPriority.kladr_id",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 147,
+      "symbol": "RegionPriority.init(kladr_id:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 154,
+      "symbol": "ScaleBound.value",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionQuery.swift",
+      "line": 156,
+      "symbol": "ScaleBound.init(value:)",
+      "symbol_kind": "source.lang.swift.decl.function.method.instance",
       "warning": "undocumented"
     },
     {
@@ -704,6 +907,27 @@
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 346,
       "symbol": "Metro.distance",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/ReverseGeocodeQuery.swift",
+      "line": 15,
+      "symbol": "ReverseGeocodeQuery.resultsCount",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/ReverseGeocodeQuery.swift",
+      "line": 16,
+      "symbol": "ReverseGeocodeQuery.language",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/ReverseGeocodeQuery.swift",
+      "line": 17,
+      "symbol": "ReverseGeocodeQuery.searchRadius",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     }
