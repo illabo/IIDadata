@@ -88,10 +88,10 @@ public struct AddressSuggestionData : Decodable {
     public let planningStructureWithType : String?
     public let postalBox : String?
     public let postalCode : String?
-    public let qc : String? // Fix letter. Read it may be String or Int.
-    public let qcComplete : String? // Fix letter. Read it may be String or Int.
-    public let qcGeo : String? // Fix letter. Read it may be String or Int.
-    public let qcHouse : String? // Fix letter. Read it may be String or Int.
+    public let qc : String?
+    public let qcComplete : String?
+    public let qcGeo : String?
+    public let qcHouse : String?
     public let region : String?
     public let regionFiasId : String?
     public let regionIsoCode : String?
@@ -210,10 +210,118 @@ public struct AddressSuggestionData : Decodable {
         case timezone = "timezone"
         case unparsedParts = "unparsed_parts"
     }
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        area = try values.decodeIfPresent(String.self, forKey: .area)
+        areaFiasId = try values.decodeIfPresent(String.self, forKey: .areaFiasId)
+        areaKladrId = try values.decodeIfPresent(String.self, forKey: .areaKladrId)
+        areaType = try values.decodeIfPresent(String.self, forKey: .areaType)
+        areaTypeFull = try values.decodeIfPresent(String.self, forKey: .areaTypeFull)
+        areaWithType = try values.decodeIfPresent(String.self, forKey: .areaWithType)
+        beltwayDistance = try values.decodeIfPresent(String.self, forKey: .beltwayDistance)
+        beltwayHit = try values.decodeIfPresent(String.self, forKey: .beltwayHit)
+        block = try values.decodeIfPresent(String.self, forKey: .block)
+        blockType = try values.decodeIfPresent(String.self, forKey: .blockType)
+        blockTypeFull = try values.decodeIfPresent(String.self, forKey: .blockTypeFull)
+        building = try values.decodeIfPresent(String.self, forKey: .building)
+        buildingType = try values.decodeIfPresent(String.self, forKey: .buildingType)
+        cadastralNumber = try values.decodeIfPresent(String.self, forKey: .cadastralNumber)
+        capitalMarker = try values.decodeIfPresent(String.self, forKey: .capitalMarker)
+        city = try values.decodeIfPresent(String.self, forKey: .city)
+        cityArea = try values.decodeIfPresent(String.self, forKey: .cityArea)
+        cityDistrict = try values.decodeIfPresent(String.self, forKey: .cityDistrict)
+        cityDistrictFiasId = try values.decodeIfPresent(String.self, forKey: .cityDistrictFiasId)
+        cityDistrictKladrId = try values.decodeIfPresent(String.self, forKey: .cityDistrictKladrId)
+        cityDistrictType = try values.decodeIfPresent(String.self, forKey: .cityDistrictType)
+        cityDistrictTypeFull = try values.decodeIfPresent(String.self, forKey: .cityDistrictTypeFull)
+        cityDistrictWithType = try values.decodeIfPresent(String.self, forKey: .cityDistrictWithType)
+        cityFiasId = try values.decodeIfPresent(String.self, forKey: .cityFiasId)
+        cityKladrId = try values.decodeIfPresent(String.self, forKey: .cityKladrId)
+        cityType = try values.decodeIfPresent(String.self, forKey: .cityType)
+        cityTypeFull = try values.decodeIfPresent(String.self, forKey: .cityTypeFull)
+        cityWithType = try values.decodeIfPresent(String.self, forKey: .cityWithType)
+        country = try values.decodeIfPresent(String.self, forKey: .country)
+        countryIsoCode = try values.decodeIfPresent(String.self, forKey: .countryIsoCode)
+        federalDistrict = try values.decodeIfPresent(String.self, forKey: .federalDistrict)
+        fiasActualityState = try values.decodeIfPresent(String.self, forKey: .fiasActualityState)
+        fiasCode = try values.decodeIfPresent(String.self, forKey: .fiasCode)
+        fiasId = try values.decodeIfPresent(String.self, forKey: .fiasId)
+        fiasLevel = try values.decodeIfPresent(String.self, forKey: .fiasLevel)
+        flat = try values.decodeIfPresent(String.self, forKey: .flat)
+        flatArea = try values.decodeIfPresent(String.self, forKey: .flatArea)
+        flatPrice = try values.decodeIfPresent(String.self, forKey: .flatPrice)
+        flatType = try values.decodeIfPresent(String.self, forKey: .flatType)
+        flatTypeFull = try values.decodeIfPresent(String.self, forKey: .flatTypeFull)
+        geoLat = try values.decodeIfPresent(String.self, forKey: .geoLat)
+        geoLon = try values.decodeIfPresent(String.self, forKey: .geoLon)
+        geonameId = try values.decodeIfPresent(String.self, forKey: .geonameId)
+        historyValues = try values.decodeIfPresent([String].self, forKey: .historyValues)
+        house = try values.decodeIfPresent(String.self, forKey: .house)
+        houseFiasId = try values.decodeIfPresent(String.self, forKey: .houseFiasId)
+        houseKladrId = try values.decodeIfPresent(String.self, forKey: .houseKladrId)
+        houseType = try values.decodeIfPresent(String.self, forKey: .houseType)
+        houseTypeFull = try values.decodeIfPresent(String.self, forKey: .houseTypeFull)
+        kladrId = try values.decodeIfPresent(String.self, forKey: .kladrId)
+        metro = try values.decodeIfPresent([Metro].self, forKey: .metro)
+        okato = try values.decodeIfPresent(String.self, forKey: .okato)
+        oktmo = try values.decodeIfPresent(String.self, forKey: .oktmo)
+        planningStructure = try values.decodeIfPresent(String.self, forKey: .planningStructure)
+        planningStructureFiasId = try values.decodeIfPresent(String.self, forKey: .planningStructureFiasId)
+        planningStructureKladrId = try values.decodeIfPresent(String.self, forKey: .planningStructureKladrId)
+        planningStructureType = try values.decodeIfPresent(String.self, forKey: .planningStructureType)
+        planningStructureTypeFull = try values.decodeIfPresent(String.self, forKey: .planningStructureTypeFull)
+        planningStructureWithType = try values.decodeIfPresent(String.self, forKey: .planningStructureWithType)
+        postalBox = try values.decodeIfPresent(String.self, forKey: .postalBox)
+        postalCode = try values.decodeIfPresent(String.self, forKey: .postalCode)
+        
+        qc = values.decodeJSONNumber(forKey: CodingKeys.qc)
+        qcComplete = values.decodeJSONNumber(forKey: CodingKeys.qcComplete)
+        qcGeo = values.decodeJSONNumber(forKey: CodingKeys.qcGeo)
+        qcHouse = values.decodeJSONNumber(forKey: CodingKeys.qcHouse)
+        
+        region = try values.decodeIfPresent(String.self, forKey: .region)
+        regionFiasId = try values.decodeIfPresent(String.self, forKey: .regionFiasId)
+        regionIsoCode = try values.decodeIfPresent(String.self, forKey: .regionIsoCode)
+        regionKladrId = try values.decodeIfPresent(String.self, forKey: .regionKladrId)
+        regionType = try values.decodeIfPresent(String.self, forKey: .regionType)
+        regionTypeFull = try values.decodeIfPresent(String.self, forKey: .regionTypeFull)
+        regionWithType = try values.decodeIfPresent(String.self, forKey: .regionWithType)
+        settlement = try values.decodeIfPresent(String.self, forKey: .settlement)
+        settlementFiasId = try values.decodeIfPresent(String.self, forKey: .settlementFiasId)
+        settlementKladrId = try values.decodeIfPresent(String.self, forKey: .settlementKladrId)
+        settlementType = try values.decodeIfPresent(String.self, forKey: .settlementType)
+        settlementTypeFull = try values.decodeIfPresent(String.self, forKey: .settlementTypeFull)
+        settlementWithType = try values.decodeIfPresent(String.self, forKey: .settlementWithType)
+        source = try values.decodeIfPresent(String.self, forKey: .source)
+        squareMeterPrice = try values.decodeIfPresent(String.self, forKey: .squareMeterPrice)
+        street = try values.decodeIfPresent(String.self, forKey: .street)
+        streetFiasId = try values.decodeIfPresent(String.self, forKey: .streetFiasId)
+        streetKladrId = try values.decodeIfPresent(String.self, forKey: .streetKladrId)
+        streetType = try values.decodeIfPresent(String.self, forKey: .streetType)
+        streetTypeFull = try values.decodeIfPresent(String.self, forKey: .streetTypeFull)
+        streetWithType = try values.decodeIfPresent(String.self, forKey: .streetWithType)
+        taxOffice = try values.decodeIfPresent(String.self, forKey: .taxOffice)
+        taxOfficeLegal = try values.decodeIfPresent(String.self, forKey: .taxOfficeLegal)
+        timezone = try values.decodeIfPresent(String.self, forKey: .timezone)
+        unparsedParts = try values.decodeIfPresent(String.self, forKey: .unparsedParts)
+    }
 }
 
 public struct Metro: Decodable{
     public let name : String?
     public let line : String?
-    public let distance : Double?
+    public let distance : String?
+    
+    enum CodingKeys: String, CodingKey {
+        case name, line, distance
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        name = try values.decodeIfPresent(String.self, forKey: .name)
+        line = try values.decodeIfPresent(String.self, forKey: .line)
+        
+        distance = values.decodeJSONNumber(forKey: CodingKeys.distance)
+    }
 }

@@ -19,6 +19,7 @@
 		49439829246ACBFA00DBA5F0 /* ReverseGeocodeQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49439822246ACBFA00DBA5F0 /* ReverseGeocodeQuery.swift */; };
 		4943982A246ACBFA00DBA5F0 /* AddressSuggestionQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49439823246ACBFA00DBA5F0 /* AddressSuggestionQuery.swift */; };
 		4943982B246ACBFA00DBA5F0 /* AddressSuggestionResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49439824246ACBFA00DBA5F0 /* AddressSuggestionResponse.swift */; };
+		497E0AE024C90BE900E613C6 /* KeyedDecodingContainer+decodeJSONNumber.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497E0ADF24C90BE900E613C6 /* KeyedDecodingContainer+decodeJSONNumber.swift */; };
 		70D2908EA18CF6AF0FD9CE07115F9A9F /* IIDadata-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = AD3C5B4D6D3B281A9C9FC8F5CFD8A43E /* IIDadata-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AD836C7C343791BA58350428A0DF90E3 /* Pods-IIDadata_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EF316A744E74C5B88BBF1A7E073CF39E /* Pods-IIDadata_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5B5D62BAC9593324A81873ADF92139B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
@@ -62,6 +63,7 @@
 		49439822246ACBFA00DBA5F0 /* ReverseGeocodeQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReverseGeocodeQuery.swift; sourceTree = "<group>"; };
 		49439823246ACBFA00DBA5F0 /* AddressSuggestionQuery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressSuggestionQuery.swift; sourceTree = "<group>"; };
 		49439824246ACBFA00DBA5F0 /* AddressSuggestionResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressSuggestionResponse.swift; sourceTree = "<group>"; };
+		497E0ADF24C90BE900E613C6 /* KeyedDecodingContainer+decodeJSONNumber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "KeyedDecodingContainer+decodeJSONNumber.swift"; sourceTree = "<group>"; };
 		4A5A42C27736F31FB57EEB846FB7E175 /* IIDadata.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IIDadata.release.xcconfig; sourceTree = "<group>"; };
 		6E78ECE04D92039F94F71CE467B6D808 /* Pods-IIDadata_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IIDadata_Tests.modulemap"; sourceTree = "<group>"; };
 		7422AE3483B5403DBE6C442A073A3FF0 /* Pods-IIDadata_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-IIDadata_Example.modulemap"; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		4943981C246ACBFA00DBA5F0 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				497E0ADE24C90BC100E613C6 /* Extension */,
 				49439821246ACBFA00DBA5F0 /* Model */,
 				4943981F246ACBFA00DBA5F0 /* DadataQueryProtocol.swift */,
 				4943981D246ACBFA00DBA5F0 /* Constants.swift */,
@@ -151,6 +154,14 @@
 				49439824246ACBFA00DBA5F0 /* AddressSuggestionResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		497E0ADE24C90BC100E613C6 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				497E0ADF24C90BE900E613C6 /* KeyedDecodingContainer+decodeJSONNumber.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		50DE24AA23629CD19EB17BAF68594C58 /* Pods-IIDadata_Example */ = {
@@ -421,6 +432,7 @@
 				49439829246ACBFA00DBA5F0 /* ReverseGeocodeQuery.swift in Sources */,
 				49439826246ACBFA00DBA5F0 /* DadataSuggestions.swift in Sources */,
 				4943982B246ACBFA00DBA5F0 /* AddressSuggestionResponse.swift in Sources */,
+				497E0AE024C90BE900E613C6 /* KeyedDecodingContainer+decodeJSONNumber.swift in Sources */,
 				49439825246ACBFA00DBA5F0 /* Constants.swift in Sources */,
 				49439827246ACBFA00DBA5F0 /* DadataQueryProtocol.swift in Sources */,
 				4943982A246ACBFA00DBA5F0 /* AddressSuggestionQuery.swift in Sources */,
