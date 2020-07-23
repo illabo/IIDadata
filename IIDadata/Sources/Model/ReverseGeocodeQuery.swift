@@ -12,9 +12,9 @@ public class ReverseGeocodeQuery: Encodable, DadataQueryProtocol{
     let latitude: Double
     let longitude: Double
     let endpoint: String
-    var resultsCount: Int? = 10
-    var language: QueryResultLanguage?
-    var searchRadius: Int?
+    public var resultsCount: Int? = 10
+    public var language: QueryResultLanguage?
+    public var searchRadius: Int?
     
     ///New instance of ReverseGeocodeQuery.
     ///- Parameter query: Query should contain latitude and longitude of the point of interest.

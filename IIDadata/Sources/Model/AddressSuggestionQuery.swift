@@ -11,13 +11,13 @@ import Foundation
 public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
     let query: String
     let queryType: AddressQueryType
-    var resultsCount: Int? = 10
-    var language: QueryResultLanguage?
-    var constraints: [AddressQueryConstraint]?
-    var regionPriority: [RegionPriority]?
-    var upperScaleLimit: ScaleBound?
-    var lowerScaleLimit: ScaleBound?
-    var trimRegionResult: Bool = false
+    public var resultsCount: Int? = 10
+    public var language: QueryResultLanguage?
+    public var constraints: [AddressQueryConstraint]?
+    public var regionPriority: [RegionPriority]?
+    public var upperScaleLimit: ScaleBound?
+    public var lowerScaleLimit: ScaleBound?
+    public var trimRegionResult: Bool = false
     
     ///New instance of AddressSuggestionQuery defaulting to simple address suggestions request.
     ///- Parameter query: Query string to be sent to API.
@@ -83,33 +83,39 @@ public enum ScaleLevel: String, Encodable {
 ///AddressQueryConstraint used to limit search results according to
 ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=204669108).
 public struct AddressQueryConstraint: Codable{
-    var region: String?
-    var city: String?
-    var street_type_full: String?
-    var settlement_type_full: String?
-    var city_district_type_full: String?
-    var city_type_full: String?
-    var area_type_full: String?
-    var region_type_full: String?
-    var country: String?
-    var country_iso_code: String?
-    var region_iso_code: String?
-    var kladr_id: String?
-    var region_fias_id: String?
-    var area_fias_id: String?
-    var city_fias_id: String?
-    var settlement_fias_id: String?
-    var street_fias_id: String?
+    public var region: String?
+    public var city: String?
+    public var street_type_full: String?
+    public var settlement_type_full: String?
+    public var city_district_type_full: String?
+    public var city_type_full: String?
+    public var area_type_full: String?
+    public var region_type_full: String?
+    public var country: String?
+    public var country_iso_code: String?
+    public var region_iso_code: String?
+    public var kladr_id: String?
+    public var region_fias_id: String?
+    public var area_fias_id: String?
+    public var city_fias_id: String?
+    public var settlement_fias_id: String?
+    public var street_fias_id: String?
+    
+    public init(){}
 }
 
 ///Helps prioritize specified region in search results by KLADR ID.
 public struct RegionPriority: Encodable{
-    var kladr_id: String?
+    public var kladr_id: String?
+    
+    public init(){}
 }
 
 ///ScaleBound holds a value for `from_bound` and `to_bound` as a ScaleLevel.
 ///See
 ///[Dadata online API documentation](https://confluence.hflabs.ru/pages/viewpage.action?pageId=285343795) for API reference.
 public struct ScaleBound: Encodable{
-    var value: ScaleLevel?
+    public var value: ScaleLevel?
+    
+    public init(){}
 }
