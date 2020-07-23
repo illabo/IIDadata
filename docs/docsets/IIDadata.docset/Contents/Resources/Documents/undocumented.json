@@ -723,28 +723,28 @@
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 215,
+      "line": 311,
       "symbol": "Metro",
       "symbol_kind": "source.lang.swift.decl.struct",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 216,
+      "line": 312,
       "symbol": "Metro.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 217,
+      "line": 313,
       "symbol": "Metro.line",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 218,
+      "line": 314,
       "symbol": "Metro.distance",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
