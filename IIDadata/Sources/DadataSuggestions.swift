@@ -124,7 +124,8 @@ public class DadataSuggestions {
     ///
     ///- Parameter query: Query string to send to API. String of a free-form e.g. address part.
     ///- Parameter completion: Result handler.
-    public func suggestAddress(_ query: String, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+    ///- Parameter result: result of address suggestion query.
+    public func suggestAddress(_ query: String, completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         suggestAddress(AddressSuggestionQuery(query), completion: completion)
     }
     
@@ -146,6 +147,7 @@ public class DadataSuggestions {
     ///- Parameter lowerScaleLimit: Smaller `ScaleLevel` object in pair of scale limits.
     ///- Parameter trimRegionResult: Remove region and city names from suggestion top level.
     ///- Parameter completion: Result handler.
+    ///- Parameter result: result of address suggestion query.
     public func suggestAddress(_ query: String,
                         queryType: AddressQueryType = .address,
                         resultsCount: Int? = 10,
@@ -155,7 +157,7 @@ public class DadataSuggestions {
                         upperScaleLimit: ScaleLevel? = nil,
                         lowerScaleLimit: ScaleLevel? = nil,
                         trimRegionResult: Bool = false,
-                        completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+                        completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         
        let suggestionQuery = AddressSuggestionQuery(query, ofType: queryType)
         
@@ -198,6 +200,7 @@ public class DadataSuggestions {
     ///`country` — Страна,
     ///- Parameter trimRegionResult: Remove region and city names from suggestion top level.
     ///- Parameter completion: Result handler.
+    ///- Parameter result: result of address suggestion query.
     public func suggestAddress(_ query: String,
                         queryType: AddressQueryType = .address,
                         resultsCount: Int? = 10,
@@ -207,7 +210,7 @@ public class DadataSuggestions {
                         upperScaleLimit: String? = nil,
                         lowerScaleLimit: String? = nil,
                         trimRegionResult: Bool = false,
-                        completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+                        completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         
         let queryConstraints: [AddressQueryConstraint]? = constraints?.compactMap{
                 if let data = $0.data(using: .utf8) {
@@ -233,7 +236,8 @@ public class DadataSuggestions {
     ///
     ///- Parameter query: Query string to send to API. String of a free-form e.g. address part.
     ///- Parameter completion: Result handler.
-    public func suggestAddressFromFIAS(_ query: String, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+    ///- Parameter result: result of address suggestion query.
+    public func suggestAddressFromFIAS(_ query: String, completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         suggestAddress(AddressSuggestionQuery(query, ofType: .fiasOnly), completion: completion)
     }
     
@@ -241,7 +245,8 @@ public class DadataSuggestions {
     ///
     ///- Parameter query: KLADR or FIAS ID.
     ///- Parameter completion: Result handler.
-    public func suggestByKLADRFIAS(_ query: String, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+    ///- Parameter result: result of address suggestion query.
+    public func suggestByKLADRFIAS(_ query: String, completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         suggestAddress(AddressSuggestionQuery(query, ofType: .findByID), completion: completion)
     }
     
@@ -249,7 +254,8 @@ public class DadataSuggestions {
     ///
     ///- Parameter query: Query object.
     ///- Parameter completion: Result handler.
-    public func suggestAddress(_ query: AddressSuggestionQuery, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+    ///- Parameter result: result of address suggestion query.
+    public func suggestAddress(_ query: AddressSuggestionQuery, completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         fetchResponse(withQuery: query, completionHandler: completion)
     }
     
@@ -264,12 +270,13 @@ public class DadataSuggestions {
     ///- Parameter language: Suggested results in "ru" — Russian or "en" — English.
     ///- Parameter searchRadius: Radius to suggest objects nearest to coordinates point.
     ///- Parameter completion: Result handler.
+    ///- Parameter result: result of reverse geocode query.
     public func reverseGeocode(query: String,
                         delimeter: Character = ",",
                         resultsCount: Int? = 10,
                         language: String? = "ru",
                         searchRadius: Int? = nil,
-                        completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void) throws {
+                        completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void) throws {
         
         let geoquery = try ReverseGeocodeQuery(query: query, delimeter: delimeter)
         geoquery.resultsCount = resultsCount
@@ -288,12 +295,13 @@ public class DadataSuggestions {
     ///- Parameter language: Suggested results may be in Russian or English.
     ///- Parameter searchRadius: Radius to suggest objects nearest to coordinates point.
     ///- Parameter completion: Result handler.
+    ///- Parameter result: result of reverse geocode query.
     public func reverseGeocode(latitude: Double,
                         longitude: Double,
                         resultsCount: Int? = 10,
                         language: QueryResultLanguage? = nil,
                         searchRadius: Int? = nil,
-                        completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+                        completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         let geoquery = ReverseGeocodeQuery(latitude: latitude, longitude: longitude)
         geoquery.resultsCount = resultsCount
         geoquery.language = language
@@ -306,7 +314,8 @@ public class DadataSuggestions {
     ///
     ///- Parameter query: Query object.
     ///- Parameter completion: Result handler.
-    public func reverseGeocode(_ query: ReverseGeocodeQuery, completion: @escaping (Result<AddressSuggestionResponse, Error>)->Void){
+    ///- Parameter result: result of reverse geocode query.
+    public func reverseGeocode(_ query: ReverseGeocodeQuery, completion: @escaping (_ result: Result<AddressSuggestionResponse, Error>)->Void){
         fetchResponse(withQuery: query, completionHandler: completion)
     }
     

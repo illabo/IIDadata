@@ -28,6 +28,8 @@ class Tests: XCTestCase {
         // Switch this return to your <# API token #>.
         DadataAPIConstants.token
     }
+    
+    #warning("TODO: make separate test cases with assertions.")
     func testAllCasesJustDoSomething(){
         DadataSuggestions(apiKey: apiToken)
             .suggestAddress(
@@ -58,7 +60,7 @@ class Tests: XCTestCase {
             upperScaleLimit: .street,
             lowerScaleLimit: .house,
             trimRegionResult: false
-        ){ try? $0.get().suggestions?.forEach{ print("\($0.value) \($0.data?.geoLat) \($0.data?.geoLon)") } }
+        ){ try? $0.get().suggestions?.forEach{ print("\(String(describing: $0.value)) \(String(describing: $0.data?.geoLat)) \(String(describing: $0.data?.geoLon))") } }
         
         try! DadataSuggestions.shared(
             apiKey: apiToken
@@ -66,7 +68,7 @@ class Tests: XCTestCase {
                          delimeter: ",",
                          resultsCount: 1,
                          language:"ru",
-                         searchRadius: 100){ try? $0.get().suggestions?.forEach{ print("\($0.value) \($0.data?.geoLat) \($0.data?.geoLon)") } }
+                         searchRadius: 100){ try? $0.get().suggestions?.forEach{ print("\(String(describing: $0.value)) \(String(describing: $0.data?.geoLat)) \(String(describing: $0.data?.geoLon))") } }
         
         
         
@@ -81,9 +83,9 @@ class Tests: XCTestCase {
                 apiKey: apiToken
             )
         
-        dadata?.suggestAddressFromFIAS("Тверская обл, Пеновский р-н, деревня Москва"){ print( try? $0.get().suggestions ) }
+        dadata?.suggestAddressFromFIAS("Тверская обл, Пеновский р-н, деревня Москва"){ print( (try? $0.get().suggestions) ?? "Nothing" ) }
         
-        dadata?.suggestAddressFromFIAS("Эрхирик"){ print( try? $0.get().suggestions ) }
+        dadata?.suggestAddressFromFIAS("Эрхирик"){ print( (try? $0.get().suggestions) ?? "Nothing" ) }
         
         dadata?.suggestAddress("Эрхирик трактовая 15", resultsCount: 1, constraints: [""]){r in
             let v = try? r.get()
@@ -92,7 +94,7 @@ class Tests: XCTestCase {
             }
         }
         
-        dadata?.suggestByKLADRFIAS("9120b43f-2fae-4838-a144-85e43c2bfb29"){ print( try? $0.get().suggestions ) }
+        dadata?.suggestByKLADRFIAS("9120b43f-2fae-4838-a144-85e43c2bfb29"){ print( (try? $0.get().suggestions) ?? "Nothing" ) }
         
         try? dadata?.reverseGeocode(query: "52.2620898, 104.3203629",
                                     delimeter: ",",
@@ -124,14 +126,14 @@ class Tests: XCTestCase {
             completion: { r in
                 switch r{
                 case .success(let v):
-                    print(v.suggestions?[0].value)
+                    print(v.suggestions?[0].value as Any)
                     try! dadata?.reverseGeocode(
                         query: "\(v.suggestions![0].data!.geoLat!), \(v.suggestions![0].data!.geoLon!)",
                         language: "en",
                         searchRadius: 100){ r in
                         switch r {
                         case .success(let v):
-                            print(v.suggestions?[0].unrestrictedValue)
+                            print(v.suggestions?[0].unrestrictedValue as Any)
                             return
                         case .failure(let e):
                             print(e)
@@ -162,7 +164,7 @@ class Tests: XCTestCase {
         }
         
         do{
-            try DadataSuggestions(apiKey: "some-garbage-token", checkWithTimeout: 15)
+            _ = try DadataSuggestions(apiKey: "some-garbage-token", checkWithTimeout: 15)
         } catch let e {
             print(e)
         }
