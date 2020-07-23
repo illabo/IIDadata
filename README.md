@@ -49,7 +49,7 @@ Basic address suggestions request to only search in FIAS database: less matches,
 dadata?.suggestAddressFromFIAS("Тверская обл, Пеновский р-н, деревня Москва"){ print( try? $0.get().suggestions ) }
 ```
 ---
-Basic address suggestions request takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+Basic address suggestions request takes KLADR or FIAS ID as a query parameter to lookup additional data.
 ```swift
 dadata?.suggestByKLADRFIAS("9120b43f-2fae-4838-a144-85e43c2bfb29"){ print( try? $0.get().suggestions ) }
 ```
@@ -115,7 +115,7 @@ pod 'IIDadata'
 
 Or use Swift PM. Add the following line to your Package.swift file in the dependencies section:
 ```swift
-.package(url: "https://github.com/illabo/IIDadata.git", from: "0.1.0")
+.package(url: "https://github.com/illabo/IIDadata.git", from: "0.2.0")
 ```
 ## Misc
 [Pre- and post-commit hooks to autogenerate docs and create tag from Podspec version label when committing on release branch](https://gist.github.com/illabo/a3cf7577f2f3b1ca809dcb80f807a857)

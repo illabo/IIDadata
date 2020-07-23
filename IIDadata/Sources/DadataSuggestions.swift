@@ -136,7 +136,7 @@ public class DadataSuggestions {
     ///- Parameter queryType: Lets select whether the request type. There are 3 query types available:
     ///`address` — standart address suggestion query;
     ///`fiasOnly` — query to only search in FIAS database: less matches, state provided address data only;
-    ///`findByID` — takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+    ///`findByID` — takes KLADR or FIAS ID as a query parameter to lookup additional data.
     ///- Parameter resultsCount: How many suggestions to return. `1` provides more data on a single object
     ///including latitude and longitude. `20` is a maximum value.
     ///- Parameter language: Suggested results may be in Russian or English.
@@ -178,7 +178,7 @@ public class DadataSuggestions {
     ///- Parameter queryType: Lets select whether the request type. There are 3 query types available:
     ///`address` — standart address suggestion query;
     ///`fiasOnly` — query to only search in FIAS database: less matches, state provided address data only;
-    ///`findByID` — takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+    ///`findByID` — takes KLADR or FIAS ID as a query parameter to lookup additional data.
     ///- Parameter resultsCount: How many suggestions to return. `1` provides more data on a single object
     ///including latitude and longitude. `20` is a maximum value.
     ///- Parameter language: Suggested results in "ru" — Russian or "en" — English.
@@ -237,7 +237,7 @@ public class DadataSuggestions {
         suggestAddress(AddressSuggestionQuery(query, ofType: .fiasOnly), completion: completion)
     }
     
-    ///Basic address suggestions request takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+    ///Basic address suggestions request takes KLADR or FIAS ID as a query parameter to lookup additional data.
     ///
     ///- Parameter query: KLADR or FIAS ID.
     ///- Parameter completion: Result handler.

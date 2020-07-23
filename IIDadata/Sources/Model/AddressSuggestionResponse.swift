@@ -41,6 +41,11 @@ public struct AddressSuggestionData : Decodable {
     public let building : String?
     public let buildingType : String?
     public let cadastralNumber : String?
+    /// - `1` — subregion (district) center
+    /// - `2` — region center
+    /// - `3` — `1` and `2` combined
+    /// - `4` — main subregion (district) in region
+    /// - `0` — no status
     public let capitalMarker : String?
     public let city : String?
     public let cityArea : String?
@@ -58,9 +63,26 @@ public struct AddressSuggestionData : Decodable {
     public let country : String?
     public let countryIsoCode : String?
     public let federalDistrict : String?
+    /// FIAS actuality
+    /// - `0`    — actual
+    /// - `1–50` — renamed
+    /// - `51`   — changed
+    /// - `99`   — removed
     public let fiasActualityState : String?
+    /// Structure of FIAS code (СС+РРР+ГГГ+ППП+СССС+УУУУ+ДДДД)
     public let fiasCode : String?
     public let fiasId : String?
+    /// FIAS address precision
+    /// - `0`  — country
+    /// - `1`  — region
+    /// - `3`  — subregion (district of region)
+    /// - `4`  — city
+    /// - `5`  — city district
+    /// - `6`  — locality, neighbourhood, settlement etc.
+    /// - `7`  — street
+    /// - `8`  — building
+    /// - `65` — city plan unit
+    /// - `-1` — empty or abroad
     public let fiasLevel : String?
     public let flat : String?
     public let flatArea : String?
@@ -90,6 +112,13 @@ public struct AddressSuggestionData : Decodable {
     public let postalCode : String?
     public let qc : String?
     public let qcComplete : String?
+    /// Coordinates precision
+    /// - `0` — precise
+    /// - `1` — nearest building
+    /// - `2` — nearest street
+    /// - `3` — city district, locality, neighbourhood, settlement etc.
+    /// - `4` — city
+    /// - `5` — failed to determine coordinates
     public let qcGeo : String?
     public let qcHouse : String?
     public let region : String?
@@ -308,6 +337,9 @@ public struct AddressSuggestionData : Decodable {
     }
 }
 
+/// Structure holding metro station name, name of a line and distance to suggested address.
+/// If there aren't metro stations nearby or API token used not subscribed to "Maximal" package
+/// `nil` is returned instead.
 public struct Metro: Decodable{
     public let name : String?
     public let line : String?

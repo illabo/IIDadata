@@ -14,7 +14,7 @@
     <a title="AddressSuggestionData Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">IIDadata 0.2.4 Docs</a> (24% documented)</p>
+        <p><a href="../index.html">IIDadata 0.2.4 Docs</a> (28% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -490,7 +490,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        
+<ul>
+<li><code>1</code> — subregion (district) center</li>
+<li><code>2</code> — region center</li>
+<li><code>3</code> — <code>1</code> and <code>2</code> combined</li>
+<li><code>4</code> — main subregion (district) in region</li>
+<li><code>0</code> — no status</li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -949,7 +956,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>FIAS actuality</p>
+
+<ul>
+<li><code>0</code>    — actual</li>
+<li><code>1–50</code> — renamed</li>
+<li><code>51</code>   — changed</li>
+<li><code>99</code>   — removed</li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -976,7 +990,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Structure of FIAS code (СС+РРР+ГГГ+ППП+СССС+УУУУ+ДДДД)</p>
 
                       </div>
                       <div class="declaration">
@@ -1030,7 +1044,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>FIAS address precision</p>
+
+<ul>
+<li><code>0</code>  — country</li>
+<li><code>1</code>  — region</li>
+<li><code>3</code>  — subregion (district of region)</li>
+<li><code>4</code>  — city</li>
+<li><code>5</code>  — city district</li>
+<li><code>6</code>  — locality, neighbourhood, settlement etc.</li>
+<li><code>7</code>  — street</li>
+<li><code>8</code>  — building</li>
+<li><code>65</code> — city plan unit</li>
+<li><code>-1</code> — empty or abroad</li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -1813,7 +1840,16 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Coordinates precision</p>
+
+<ul>
+<li><code>0</code> — precise</li>
+<li><code>1</code> — nearest building</li>
+<li><code>2</code> — nearest street</li>
+<li><code>3</code> — city district, locality, neighbourhood, settlement etc.</li>
+<li><code>4</code> — city</li>
+<li><code>5</code> — failed to determine coordinates</li>
+</ul>
 
                       </div>
                       <div class="declaration">

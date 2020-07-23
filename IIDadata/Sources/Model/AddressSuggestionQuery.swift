@@ -31,7 +31,7 @@ public class AddressSuggestionQuery: Encodable, DadataQueryProtocol{
     ///It could be of type
     ///`address` — standart address suggestion query;
     ///`fiasOnly` — query to only search in FIAS database: less matches, state provided address data only;
-    ///`findByID` — takes KLADR or FIAS ID as a qury parameter to lookup additional data.
+    ///`findByID` — takes KLADR or FIAS ID as a query parameter to lookup additional data.
     public required init(_ query: String, ofType type: AddressQueryType){
         self.query = query
         self.queryType = type
