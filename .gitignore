@@ -18,6 +18,7 @@ profile
 DerivedData
 *.hmap
 *.ipa
+Example/IIDadata.xcodeproj/project.xcworkspace/xcshareddata/
 
 # Bundler
 .bundle
