@@ -117,6 +117,17 @@ Or use Swift PM. Add the following line to your Package.swift file in the depend
 ```swift
 .package(url: "https://github.com/illabo/IIDadata.git", from: "0.2.0")
 ```
+
+## For contributors
+The most convenient way to edit the project is to open `Example/IIDadata.xcworkspace` in Xcode. It is the workspace of a pod in Cocoapods' terms. It includes not only the IIDadata pod itself, but also an example target with tests.
+Alternatively you may want to edit IIDadata as Swift PM package. To do so just open `Package.swift`. Please be aware that the layout in Project Navigator pane would look not the same as if you'd open the `xcworkspace`.
+To run `XCTestCase` you have to create a struct in `Tests` directory containint your Dadata API token according to example below. The `token` field would be called during the tests.
+```swift
+struct DadataAPIConstants {
+    static let token = "<# Dadata API token #>"
+}
+```
+
 ## Misc
 - [Pre- and post-commit hooks to autogenerate docs and create tag from Podspec version label when committing on release branch](https://gist.github.com/illabo/a3cf7577f2f3b1ca809dcb80f807a857)
 - [Android library port written in Kotlin](https://github.com/illabo/DadataSuggestions)

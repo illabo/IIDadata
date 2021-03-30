@@ -81,10 +81,12 @@ public struct AddressSuggestionData : Decodable {
     /// - `6`  — locality, neighbourhood, settlement etc.
     /// - `7`  — street
     /// - `8`  — building
+    /// - `9`  — flat / apartment
     /// - `65` — city plan unit
     /// - `-1` — empty or abroad
     public let fiasLevel : String?
     public let flat : String?
+    public let flatFiasId : String?
     public let flatArea : String?
     public let flatPrice : String?
     public let flatType : String?
@@ -184,6 +186,7 @@ public struct AddressSuggestionData : Decodable {
         case fiasId = "fias_id"
         case fiasLevel = "fias_level"
         case flat = "flat"
+        case flatFiasId = "flat_fias_id"
         case flatArea = "flat_area"
         case flatPrice = "flat_price"
         case flatType = "flat_type"
@@ -278,6 +281,7 @@ public struct AddressSuggestionData : Decodable {
         fiasId = try values.decodeIfPresent(String.self, forKey: .fiasId)
         fiasLevel = try values.decodeIfPresent(String.self, forKey: .fiasLevel)
         flat = try values.decodeIfPresent(String.self, forKey: .flat)
+        flatFiasId = try values.decodeIfPresent(String.self, forKey: .flatFiasId)
         flatArea = try values.decodeIfPresent(String.self, forKey: .flatArea)
         flatPrice = try values.decodeIfPresent(String.self, forKey: .flatPrice)
         flatType = try values.decodeIfPresent(String.self, forKey: .flatType)

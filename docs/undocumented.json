@@ -513,399 +513,406 @@
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 87,
+      "line": 88,
       "symbol": "AddressSuggestionData.flat",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 88,
-      "symbol": "AddressSuggestionData.flatArea",
-      "symbol_kind": "source.lang.swift.decl.var.instance",
-      "warning": "undocumented"
-    },
-    {
-      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 89,
-      "symbol": "AddressSuggestionData.flatPrice",
+      "symbol": "AddressSuggestionData.flatFiasId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 90,
-      "symbol": "AddressSuggestionData.flatType",
+      "symbol": "AddressSuggestionData.flatArea",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 91,
-      "symbol": "AddressSuggestionData.flatTypeFull",
+      "symbol": "AddressSuggestionData.flatPrice",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 92,
-      "symbol": "AddressSuggestionData.geoLat",
+      "symbol": "AddressSuggestionData.flatType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 93,
-      "symbol": "AddressSuggestionData.geoLon",
+      "symbol": "AddressSuggestionData.flatTypeFull",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 94,
-      "symbol": "AddressSuggestionData.geonameId",
+      "symbol": "AddressSuggestionData.geoLat",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 95,
-      "symbol": "AddressSuggestionData.historyValues",
+      "symbol": "AddressSuggestionData.geoLon",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 96,
-      "symbol": "AddressSuggestionData.house",
+      "symbol": "AddressSuggestionData.geonameId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 97,
-      "symbol": "AddressSuggestionData.houseFiasId",
+      "symbol": "AddressSuggestionData.historyValues",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 98,
-      "symbol": "AddressSuggestionData.houseKladrId",
+      "symbol": "AddressSuggestionData.house",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 99,
-      "symbol": "AddressSuggestionData.houseType",
+      "symbol": "AddressSuggestionData.houseFiasId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 100,
-      "symbol": "AddressSuggestionData.houseTypeFull",
+      "symbol": "AddressSuggestionData.houseKladrId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 101,
-      "symbol": "AddressSuggestionData.kladrId",
+      "symbol": "AddressSuggestionData.houseType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 102,
-      "symbol": "AddressSuggestionData.metro",
+      "symbol": "AddressSuggestionData.houseTypeFull",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 103,
-      "symbol": "AddressSuggestionData.okato",
+      "symbol": "AddressSuggestionData.kladrId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 104,
-      "symbol": "AddressSuggestionData.oktmo",
+      "symbol": "AddressSuggestionData.metro",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 105,
-      "symbol": "AddressSuggestionData.planningStructure",
+      "symbol": "AddressSuggestionData.okato",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 106,
-      "symbol": "AddressSuggestionData.planningStructureFiasId",
+      "symbol": "AddressSuggestionData.oktmo",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 107,
-      "symbol": "AddressSuggestionData.planningStructureKladrId",
+      "symbol": "AddressSuggestionData.planningStructure",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 108,
-      "symbol": "AddressSuggestionData.planningStructureType",
+      "symbol": "AddressSuggestionData.planningStructureFiasId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 109,
-      "symbol": "AddressSuggestionData.planningStructureTypeFull",
+      "symbol": "AddressSuggestionData.planningStructureKladrId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 110,
-      "symbol": "AddressSuggestionData.planningStructureWithType",
+      "symbol": "AddressSuggestionData.planningStructureType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 111,
-      "symbol": "AddressSuggestionData.postalBox",
+      "symbol": "AddressSuggestionData.planningStructureTypeFull",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 112,
-      "symbol": "AddressSuggestionData.postalCode",
+      "symbol": "AddressSuggestionData.planningStructureWithType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 113,
-      "symbol": "AddressSuggestionData.qc",
+      "symbol": "AddressSuggestionData.postalBox",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
       "line": 114,
+      "symbol": "AddressSuggestionData.postalCode",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
+      "line": 115,
+      "symbol": "AddressSuggestionData.qc",
+      "symbol_kind": "source.lang.swift.decl.var.instance",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
+      "line": 116,
       "symbol": "AddressSuggestionData.qcComplete",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 123,
+      "line": 125,
       "symbol": "AddressSuggestionData.qcHouse",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 124,
+      "line": 126,
       "symbol": "AddressSuggestionData.region",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 125,
+      "line": 127,
       "symbol": "AddressSuggestionData.regionFiasId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 126,
+      "line": 128,
       "symbol": "AddressSuggestionData.regionIsoCode",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 127,
+      "line": 129,
       "symbol": "AddressSuggestionData.regionKladrId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 128,
+      "line": 130,
       "symbol": "AddressSuggestionData.regionType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 129,
+      "line": 131,
       "symbol": "AddressSuggestionData.regionTypeFull",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 130,
+      "line": 132,
       "symbol": "AddressSuggestionData.regionWithType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 131,
+      "line": 133,
       "symbol": "AddressSuggestionData.settlement",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 132,
+      "line": 134,
       "symbol": "AddressSuggestionData.settlementFiasId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 133,
+      "line": 135,
       "symbol": "AddressSuggestionData.settlementKladrId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 134,
+      "line": 136,
       "symbol": "AddressSuggestionData.settlementType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 135,
+      "line": 137,
       "symbol": "AddressSuggestionData.settlementTypeFull",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 136,
+      "line": 138,
       "symbol": "AddressSuggestionData.settlementWithType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 137,
+      "line": 139,
       "symbol": "AddressSuggestionData.source",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 138,
+      "line": 140,
       "symbol": "AddressSuggestionData.squareMeterPrice",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 139,
+      "line": 141,
       "symbol": "AddressSuggestionData.street",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 140,
+      "line": 142,
       "symbol": "AddressSuggestionData.streetFiasId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 141,
+      "line": 143,
       "symbol": "AddressSuggestionData.streetKladrId",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 142,
+      "line": 144,
       "symbol": "AddressSuggestionData.streetType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 143,
+      "line": 145,
       "symbol": "AddressSuggestionData.streetTypeFull",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 144,
+      "line": 146,
       "symbol": "AddressSuggestionData.streetWithType",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 145,
+      "line": 147,
       "symbol": "AddressSuggestionData.taxOffice",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 146,
+      "line": 148,
       "symbol": "AddressSuggestionData.taxOfficeLegal",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 147,
+      "line": 149,
       "symbol": "AddressSuggestionData.timezone",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 148,
+      "line": 150,
       "symbol": "AddressSuggestionData.unparsedParts",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 344,
+      "line": 348,
       "symbol": "Metro.name",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 345,
+      "line": 349,
       "symbol": "Metro.line",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
     },
     {
       "file": "/Users/illabo/Dev/IIDadata/IIDadata/Sources/Model/AddressSuggestionResponse.swift",
-      "line": 346,
+      "line": 350,
       "symbol": "Metro.distance",
       "symbol_kind": "source.lang.swift.decl.var.instance",
       "warning": "undocumented"
